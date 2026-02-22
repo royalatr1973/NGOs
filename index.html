@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comprehensive directory of NGOs in India with detailed information on 50+ organisations across education, healthcare, environment, women empowerment and more.">
+  <meta name="keywords" content="NGO India, Non-Governmental Organisations, Indian NGOs, charity India, social sector India, NGO directory">
+  <title>NGO Directory India - Comprehensive Guide to Non-Governmental Organisations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Indian Flag Stripe -->
+  <div class="india-flag-stripe"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="header-brand">
+        <span class="logo-icon">&#127470;&#127475;</span>
+        <div>
+          <h1>NGO Directory <span>India</span></h1>
+          <div class="tagline">Comprehensive guide to India's social sector organisations</div>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <button class="nav-btn active" data-section="directory" onclick="window.ngoApp.switchSection('directory')">Directory</button>
+        <button class="nav-btn" data-section="dashboard" onclick="window.ngoApp.switchSection('dashboard')">Statistics</button>
+        <button class="nav-btn" data-section="about" onclick="window.ngoApp.switchSection('about')">About & Users</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Discover India's NGOs</h2>
+    <p>Explore detailed profiles of non-governmental organisations working across India in education, healthcare, environment, women empowerment, and more.</p>
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number" id="totalNGOs">0</div>
+        <div class="stat-label">NGOs Listed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="totalStates">0</div>
+        <div class="stat-label">States Covered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="totalSectors">0</div>
+        <div class="stat-label">Sectors</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search & Filter -->
+  <section class="search-section">
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <input type="text" id="searchInput" placeholder="Search by name, sector, state, founder, or keyword...">
+        <button class="search-btn">&#128269; Search</button>
+      </div>
+      <div class="filters">
+        <select id="sectorFilter" class="filter-select">
+          <option value="">All Sectors</option>
+        </select>
+        <select id="stateFilter" class="filter-select">
+          <option value="">All States</option>
+        </select>
+        <select id="sortSelect" class="filter-select">
+          <option value="name">Sort: Name (A-Z)</option>
+          <option value="founded-old">Sort: Oldest First</option>
+          <option value="founded-new">Sort: Newest First</option>
+          <option value="state">Sort: State</option>
+        </select>
+        <div class="view-toggle">
+          <button class="view-btn active" data-view="grid" onclick="window.ngoApp.setView('grid')">&#9638; Grid</button>
+          <button class="view-btn" data-view="list" onclick="window.ngoApp.setView('list')">&#9776; List</button>
+        </div>
+        <span id="resultsCount" class="results-count"></span>
+      </div>
+      <div id="activeFilters" style="margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap;"></div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Directory Section -->
+    <div id="directorySection">
+      <div id="ngoGrid" class="ngo-grid"></div>
+      <div id="pagination" class="pagination"></div>
+    </div>
+
+    <!-- Dashboard / Statistics Section -->
+    <div id="dashboardSection" class="dashboard">
+      <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:24px; color:var(--primary);">NGO Landscape Statistics</h2>
+
+      <div class="summary-row">
+        <div class="summary-card">
+          <div class="sc-number" id="summaryTotalNGOs">0</div>
+          <div class="sc-label">Total NGOs</div>
+        </div>
+        <div class="summary-card sc-orange">
+          <div class="sc-number" id="summaryTotalStates">0</div>
+          <div class="sc-label">States Covered</div>
+        </div>
+        <div class="summary-card sc-green">
+          <div class="sc-number" id="summaryTotalSectors">0</div>
+          <div class="sc-label">Sectors</div>
+        </div>
+        <div class="summary-card sc-purple">
+          <div class="sc-number" id="summaryAvgAge">0</div>
+          <div class="sc-label">Avg. Age</div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="dashboard-card">
+          <h3>&#128202; Top Sectors by NGO Count</h3>
+          <div id="sectorChart"></div>
+        </div>
+        <div class="dashboard-card">
+          <h3>&#128205; NGOs by Headquarters State</h3>
+          <div id="stateChart"></div>
+        </div>
+        <div class="dashboard-card">
+          <h3>&#128197; NGOs by Founding Decade</h3>
+          <div id="decadeChart"></div>
+        </div>
+        <div class="dashboard-card">
+          <h3>&#127942; Longest Running NGOs</h3>
+          <div id="oldestNGOs"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="aboutSection" class="about-section">
+      <div class="about-content">
+        <div class="about-card">
+          <h3>About This Directory</h3>
+          <p>The NGO Directory India is a comprehensive platform listing non-governmental organisations working across India. Each listing captures detailed information including registration details, FCRA numbers, PAN, annual budgets, team size, operational areas, awards, contact information, and more.</p>
+          <p>Our goal is to bring transparency and accessibility to India's vibrant social sector, connecting organisations with donors, volunteers, researchers, and policymakers.</p>
+        </div>
+
+        <div class="about-card">
+          <h3>Who Are the Users of This Website?</h3>
+          <div class="user-cards">
+            <div class="user-card">
+              <h4>Individual Donors</h4>
+              <p>People who want to donate to verified, transparent NGOs. They can research organisations, compare their impact, check registration details, and make informed giving decisions.</p>
+            </div>
+            <div class="user-card">
+              <h4>Corporate CSR Teams</h4>
+              <p>Companies looking for NGO partners to fulfil their Corporate Social Responsibility (CSR) mandates under Section 135 of the Companies Act. They can filter by sector and geography to find the right partners.</p>
+            </div>
+            <div class="user-card">
+              <h4>Volunteers</h4>
+              <p>Individuals and groups seeking meaningful volunteer opportunities. They can discover NGOs in their city or state, learn about different causes, and connect directly with organisations.</p>
+            </div>
+            <div class="user-card">
+              <h4>Researchers & Academics</h4>
+              <p>Students, professors, and think tanks studying India's social sector. They access data on sector distribution, geographic coverage, founding trends, and organisational scale.</p>
+            </div>
+            <div class="user-card">
+              <h4>Government & Policymakers</h4>
+              <p>Government officials looking to partner with or understand the NGO landscape. They can identify organisations working on specific issues or in specific regions.</p>
+            </div>
+            <div class="user-card">
+              <h4>International Foundations & Donors</h4>
+              <p>Global philanthropies and bilateral agencies seeking credible Indian partner organisations for grants and programme implementation.</p>
+            </div>
+            <div class="user-card">
+              <h4>Media & Journalists</h4>
+              <p>Reporters and media professionals researching stories about social impact, NGO accountability, or specific social issues who need verified information about organisations.</p>
+            </div>
+            <div class="user-card">
+              <h4>Other NGOs & Peer Organisations</h4>
+              <p>NGOs looking for collaboration, knowledge sharing, or understanding who else works in their sector or geography to avoid duplication and find partners.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <h3>What Value Does This Website Create?</h3>
+          <div class="value-cards">
+            <div class="value-card">
+              <h4>Transparency & Trust</h4>
+              <p>By listing registration numbers, FCRA details, PAN, tax exemption status, and financial data, the platform builds trust and enables verification of genuine organisations.</p>
+            </div>
+            <div class="value-card">
+              <h4>Efficient Resource Allocation</h4>
+              <p>Donors and CSR teams can make data-driven decisions about where to direct funding, reducing wastage and ensuring funds reach credible organisations.</p>
+            </div>
+            <div class="value-card">
+              <h4>Strengthening the Social Sector Ecosystem</h4>
+              <p>When NGOs are visible and discoverable, they attract more support. This directory acts as a multiplier for the entire social sector ecosystem in India.</p>
+            </div>
+            <div class="value-card">
+              <h4>Closing the Information Gap</h4>
+              <p>India has over 3 million registered NGOs but information about them is scattered across government databases. This platform consolidates key data into one accessible place.</p>
+            </div>
+            <div class="value-card">
+              <h4>Enabling Collaboration</h4>
+              <p>NGOs working in similar sectors or regions can discover each other, leading to partnerships, knowledge sharing, and reduced duplication of efforts.</p>
+            </div>
+            <div class="value-card">
+              <h4>Accountability & Governance</h4>
+              <p>Public availability of organisation data incentivises better governance, financial discipline, and impact reporting among NGOs.</p>
+            </div>
+            <div class="value-card">
+              <h4>Volunteer Mobilisation</h4>
+              <p>By making it easy to discover NGOs by location and cause, the platform helps match willing volunteers with organisations that need them, boosting civic participation.</p>
+            </div>
+            <div class="value-card">
+              <h4>Research & Policy Insights</h4>
+              <p>Aggregate data on the NGO landscape (sector distribution, geographic gaps, founding trends) informs academic research and government policy design.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Detail Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modalContent"></div>
+  </div>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTopBtn" title="Back to top">&#8593;</button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="india-flag-stripe" style="margin-bottom: 32px;"></div>
+    <div class="footer-content">
+      <div>
+        <h4>NGO Directory India</h4>
+        <p>A comprehensive platform for discovering, researching, and connecting with non-governmental organisations across India. Promoting transparency, accountability, and collaboration in the social sector.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#" onclick="window.ngoApp.switchSection('directory'); return false;">Browse NGOs</a></li>
+          <li><a href="#" onclick="window.ngoApp.switchSection('dashboard'); return false;">View Statistics</a></li>
+          <li><a href="#" onclick="window.ngoApp.switchSection('about'); return false;">About & Users</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Data Details</h4>
+        <ul>
+          <li>50 NGOs profiled with full details</li>
+          <li>Registration, FCRA, PAN captured</li>
+          <li>Budget, team size, beneficiary data</li>
+          <li>Contact, awards, operational areas</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Disclaimer</h4>
+        <p>This directory is for informational purposes. Users should independently verify details before making donation or partnership decisions. We encourage checking the official NGO Darpan portal for the latest status.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 NGO Directory India. Built to strengthen India's social sector ecosystem.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/ngos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
