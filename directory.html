@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO Directory — Browse All NGOs in India</title>
+  <meta name="description" content="Browse and filter thousands of NGOs across India. Search by cause, state, FCRA status, registration type, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .directory-layout { display: grid; grid-template-columns: 260px 1fr; gap: 28px; align-items: start; }
+    .sidebar-filters { position: sticky; top: 130px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; }
+    .sidebar-filters-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--border-light); display: flex; align-items: center; justify-content: space-between; }
+    .filter-section { margin-bottom: 20px; }
+    .filter-section-title { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 10px; }
+    .sidebar-select { width: 100%; }
+    .checkbox-item { display: flex; align-items: center; gap: 8px; padding: 6px 0; cursor: pointer; font-size: 0.875rem; color: var(--text-medium); }
+    .checkbox-item input { width: 16px; height: 16px; accent-color: var(--primary); }
+    .dir-header { margin-bottom: 28px; }
+    .dir-header h1 { font-size: 1.6rem; margin-bottom: 6px; }
+    .dir-controls { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+    .dir-search-bar { display: flex; align-items: center; gap: 10px; background: #fff; border: 1.5px solid var(--border); border-radius: var(--radius-full); padding: 8px 16px; flex: 1; max-width: 440px; }
+    .dir-search-bar input { flex: 1; border: none; outline: none; font-size: 0.9rem; }
+    .sort-wrap { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-light); white-space: nowrap; }
+    .active-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .active-filter-chip { display: flex; align-items: center; gap: 6px; background: var(--primary-light); color: var(--primary-dark); padding: 4px 10px; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 600; }
+    .active-filter-chip button { background: none; border: none; color: var(--primary); cursor: pointer; font-size: 1rem; line-height: 1; padding: 0; margin-left: 2px; }
+    @media(max-width:900px) { .directory-layout { grid-template-columns: 1fr; } .sidebar-filters { position: static; } }
+    .ngo-list-view { display: none; }
+    .view-toggle { display: flex; gap: 6px; }
+    .view-btn { padding: 7px 12px; border: 1.5px solid var(--border); border-radius: var(--radius); font-size: 0.85rem; color: var(--text-medium); cursor: pointer; transition: all var(--transition); }
+    .view-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+  </style>
+</head>
+<body data-page="directory">
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand" aria-label="NGO Directory India Home">
+      <div class="navbar-logo" aria-hidden="true">N</div>
+      <span class="navbar-name">NGO <span>Directory India</span></span>
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="directory.html" class="nav-link active" aria-current="page">Directory</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="about.html#users" class="nav-link">Who Uses This?</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <a href="directory.html" class="btn btn-primary btn-sm">Browse NGOs</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="directory.html" class="mobile-nav-link active">Directory</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+  </div>
+</nav>
+
+<!-- ===== PAGE HERO ===== -->
+<div style="background:linear-gradient(135deg,#1e3a8a,#1d4ed8);padding:36px 0 28px">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">NGO Directory</span>
+    </nav>
+    <h1 style="color:#fff;margin-bottom:6px">NGO Directory India</h1>
+    <p style="color:rgba(255,255,255,0.8);font-size:1rem">Browse <strong style="color:#fff">3.3 million+</strong> registered NGOs across India. Filter by cause, location, registration details, and more.</p>
+  </div>
+</div>
+
+<!-- ===== FILTER CHIPS BAR ===== -->
+<div class="filter-bar" role="navigation" aria-label="Category filters">
+  <div class="container">
+    <div class="filter-bar-inner">
+      <span style="font-size:0.82rem;font-weight:600;color:var(--text-dark);white-space:nowrap">Quick Filter:</span>
+      <div class="filter-chips" role="list">
+        <button class="filter-chip" data-cat="Education" role="listitem">📚 Education</button>
+        <button class="filter-chip" data-cat="Health" role="listitem">🏥 Health</button>
+        <button class="filter-chip" data-cat="Environment" role="listitem">🌿 Environment</button>
+        <button class="filter-chip" data-cat="Rural Development" role="listitem">🌾 Rural</button>
+        <button class="filter-chip" data-cat="Women Empowerment" role="listitem">👩 Women</button>
+        <button class="filter-chip" data-cat="Child Welfare" role="listitem">👶 Children</button>
+        <button class="filter-chip" data-cat="Disaster Relief" role="listitem">🆘 Disaster</button>
+        <button class="filter-chip" data-cat="Mental Health" role="listitem">🧠 Mental Health</button>
+      </div>
+      <span class="filter-count" id="result-count" aria-live="polite">Loading…</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<section style="padding:32px 0 64px;background:var(--bg-light)">
+  <div class="container">
+    <div class="directory-layout">
+
+      <!-- SIDEBAR FILTERS -->
+      <aside aria-label="Search and filter NGOs">
+        <div class="sidebar-filters">
+          <div class="sidebar-filters-title">
+            <span>🔧 Filters</span>
+            <button onclick="clearFilters()" class="btn btn-sm" style="font-size:0.78rem;color:var(--primary);padding:4px 10px">Clear All</button>
+          </div>
+
+          <!-- Search -->
+          <div class="filter-section">
+            <div class="filter-section-title">Search</div>
+            <div class="search-input-wrap">
+              <span class="search-icon">🔍</span>
+              <input type="search" id="search-input" class="form-control" placeholder="Name, city, cause…" aria-label="Search NGOs">
+            </div>
+          </div>
+
+          <!-- Cause Category -->
+          <div class="filter-section">
+            <div class="filter-section-title">Cause Category</div>
+            <select id="filter-category" class="form-control filter-select sidebar-select" aria-label="Filter by cause category">
+              <option value="">All Categories</option>
+              <option value="Education">Education</option>
+              <option value="Health">Health</option>
+              <option value="Environment">Environment</option>
+              <option value="Rural Development">Rural Development</option>
+              <option value="Women Empowerment">Women Empowerment</option>
+              <option value="Child Welfare">Child Welfare</option>
+              <option value="Elderly Care">Elderly Care</option>
+              <option value="Disaster Relief">Disaster Relief</option>
+              <option value="Mental Health">Mental Health</option>
+              <option value="Livelihood">Livelihood</option>
+              <option value="Nutrition">Nutrition</option>
+              <option value="Wildlife Conservation">Wildlife Conservation</option>
+              <option value="Disability">Disability</option>
+              <option value="Human Rights">Human Rights</option>
+              <option value="Tribal Development">Tribal Development</option>
+              <option value="Water &amp; Sanitation">Water &amp; Sanitation</option>
+              <option value="Arts &amp; Culture">Arts &amp; Culture</option>
+              <option value="Sports">Sports</option>
+              <option value="Digital Literacy">Digital Literacy</option>
+              <option value="Animal Welfare">Animal Welfare</option>
+            </select>
+          </div>
+
+          <!-- State -->
+          <div class="filter-section">
+            <div class="filter-section-title">State / UT</div>
+            <select id="filter-state" class="form-control filter-select sidebar-select" aria-label="Filter by state">
+              <option value="">All States</option>
+              <option>Andhra Pradesh</option>
+              <option>Arunachal Pradesh</option>
+              <option>Assam</option>
+              <option>Bihar</option>
+              <option>Chhattisgarh</option>
+              <option>Goa</option>
+              <option>Gujarat</option>
+              <option>Haryana</option>
+              <option>Himachal Pradesh</option>
+              <option>Jharkhand</option>
+              <option>Karnataka</option>
+              <option>Kerala</option>
+              <option>Madhya Pradesh</option>
+              <option>Maharashtra</option>
+              <option>Manipur</option>
+              <option>Meghalaya</option>
+              <option>Mizoram</option>
+              <option>Nagaland</option>
+              <option>Odisha</option>
+              <option>Punjab</option>
+              <option>Rajasthan</option>
+              <option>Sikkim</option>
+              <option>Tamil Nadu</option>
+              <option>Telangana</option>
+              <option>Tripura</option>
+              <option>Uttar Pradesh</option>
+              <option>Uttarakhand</option>
+              <option>West Bengal</option>
+              <option>Delhi</option>
+              <option>Jammu &amp; Kashmir</option>
+              <option>Ladakh</option>
+              <option>Puducherry</option>
+              <option>Chandigarh</option>
+              <option>Andaman &amp; Nicobar Islands</option>
+            </select>
+          </div>
+
+          <!-- Registration Type -->
+          <div class="filter-section">
+            <div class="filter-section-title">Registration Type</div>
+            <select id="filter-type" class="form-control filter-select sidebar-select" aria-label="Filter by registration type">
+              <option value="">All Types</option>
+              <option value="Trust">Trust</option>
+              <option value="Society">Society (Registered Society)</option>
+              <option value="Section 8 Company">Section 8 Company</option>
+            </select>
+          </div>
+
+          <!-- FCRA Status -->
+          <div class="filter-section">
+            <div class="filter-section-title">FCRA Status</div>
+            <select id="filter-fcra" class="form-control filter-select sidebar-select" aria-label="Filter by FCRA status">
+              <option value="">Any</option>
+              <option value="yes">FCRA Registered</option>
+              <option value="no">Not FCRA Registered</option>
+            </select>
+          </div>
+
+          <!-- Sort -->
+          <div class="filter-section">
+            <div class="filter-section-title">Sort By</div>
+            <select id="sort-select" class="form-control filter-select sidebar-select" aria-label="Sort NGOs">
+              <option value="name">Name (A–Z)</option>
+              <option value="name-desc">Name (Z–A)</option>
+              <option value="rating">Highest Rated</option>
+              <option value="year-asc">Founded (Oldest First)</option>
+              <option value="year-desc">Founded (Newest First)</option>
+            </select>
+          </div>
+
+          <!-- Additional Filters (info) -->
+          <div class="filter-section">
+            <div class="filter-section-title">Quick Badges</div>
+            <label class="checkbox-item">
+              <input type="checkbox" id="filter-verified"> Verified Only
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox"> 80G Approved
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox"> CSR Eligible
+            </label>
+          </div>
+
+          <div class="notice notice-info">
+            <span>ℹ️</span>
+            <span style="font-size:0.8rem">Data sourced from MCA21, FCRA Portal, Income Tax Dept., and NGO Darpan.</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN NGO GRID -->
+      <main aria-label="NGO listings">
+        <div class="dir-controls">
+          <div>
+            <span id="result-count-main" style="font-size:0.9rem;font-weight:600;color:var(--text-dark)" aria-live="polite">Loading NGOs…</span>
+          </div>
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="view-toggle">
+              <button class="view-btn active" onclick="setView('grid')" title="Grid view" aria-label="Grid view">⊞</button>
+              <button class="view-btn" onclick="setView('list')" title="List view" aria-label="List view">☰</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Filters Display -->
+        <div class="active-filters" id="active-filters" aria-label="Active filters"></div>
+
+        <!-- NGO Grid -->
+        <div class="ngo-grid" id="ngo-grid" role="list" aria-label="NGO listings" aria-live="polite">
+          <div style="grid-column:1/-1;text-align:center;padding:60px 20px">
+            <div style="font-size:2rem">⏳</div>
+            <p style="color:var(--text-light);margin-top:8px">Loading NGOs…</p>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="pagination" role="navigation" aria-label="Page navigation"></div>
+
+        <!-- Data Disclaimer -->
+        <div class="notice notice-warn mt-6" style="margin-top:32px">
+          <span>⚠️</span>
+          <span style="font-size:0.8rem">This directory is for informational purposes only. Always verify NGO credentials directly before making donations or partnerships. Registration details should be confirmed with the relevant government authorities.</span>
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">N</div>
+          <span class="footer-logo-name">NGO Directory India</span>
+        </div>
+        <p class="footer-desc">India's most comprehensive database of NGOs and non-profit organizations.</p>
+      </div>
+      <div>
+        <div class="footer-title">Directory</div>
+        <a href="directory.html" class="footer-link">Browse All NGOs</a>
+        <a href="directory.html?category=Education" class="footer-link">Education NGOs</a>
+        <a href="directory.html?category=Health" class="footer-link">Health NGOs</a>
+        <a href="directory.html?category=Environment" class="footer-link">Environment NGOs</a>
+      </div>
+      <div>
+        <div class="footer-title">About</div>
+        <a href="about.html" class="footer-link">About Project</a>
+        <a href="about.html#users" class="footer-link">Who Uses This?</a>
+        <a href="about.html#value" class="footer-link">Value Created</a>
+      </div>
+      <div>
+        <div class="footer-title">Resources</div>
+        <a href="#" class="footer-link">NGO Registration Guide</a>
+        <a href="#" class="footer-link">CSR Compliance Guide</a>
+        <a href="#" class="footer-link">FCRA Guidelines</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 NGO Directory India. For informational purposes only.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+function setView(type) {
+  document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  const grid = document.getElementById('ngo-grid');
+  if (type === 'list') {
+    grid.style.gridTemplateColumns = '1fr';
+  } else {
+    grid.style.gridTemplateColumns = '';
+  }
+}
+// Update main result count
+const origRender = window.updateResultCount;
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new MutationObserver(() => {
+    const el = document.getElementById('result-count-main');
+    const src = document.getElementById('result-count');
+    if (el && src) el.textContent = src.textContent;
+  });
+  const src = document.getElementById('result-count');
+  if (src) observer.observe(src, { childList: true, characterData: true, subtree: true });
+});
+</script>
+</body>
+</html>

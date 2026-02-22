@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — NGO Directory India | Users & Value Created</title>
+  <meta name="description" content="Learn about NGO Directory India — who uses it, what value it creates for donors, CSR teams, government, volunteers, researchers, and the development ecosystem.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .about-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1d4ed8 100%);
+      padding: 80px 0 64px; text-align: center;
+    }
+    .about-hero h1 { color: #fff; margin-bottom: 16px; }
+    .about-hero p { color: rgba(255,255,255,0.8); max-width: 640px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; }
+
+    /* Users Section */
+    .user-section { padding: 80px 0; }
+    .users-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .user-card-full {
+      background: #fff; border-radius: var(--radius-lg);
+      border: 1px solid var(--border); overflow: hidden;
+      transition: all var(--transition-slow);
+    }
+    .user-card-full:hover { box-shadow: var(--shadow-xl); transform: translateY(-4px); }
+    .user-card-header {
+      padding: 28px 28px 20px;
+      display: flex; align-items: flex-start; gap: 16px;
+    }
+    .user-avatar {
+      width: 56px; height: 56px; border-radius: var(--radius-lg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; flex-shrink: 0;
+    }
+    .user-card-body { padding: 0 28px 24px; }
+    .user-card-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+    .user-card-subtitle { font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+    .user-card-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.7; margin-bottom: 16px; }
+    .user-needs-title { font-size: 0.8rem; font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 8px; }
+    .user-needs-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .user-needs-list li { font-size: 0.83rem; color: var(--text-medium); display: flex; gap: 8px; align-items: flex-start; }
+    .user-needs-list li::before { content: '✓'; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .user-card-footer { padding: 16px 28px; border-top: 1px solid var(--border-light); background: var(--bg-light); }
+    .user-quote { font-size: 0.85rem; color: var(--text-light); font-style: italic; line-height: 1.6; }
+
+    /* Value Section */
+    .value-section { padding: 80px 0; background: #fff; }
+    .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .value-item {
+      border-radius: var(--radius-lg); padding: 28px;
+      border: 1px solid var(--border);
+      transition: all var(--transition-slow);
+    }
+    .value-item:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .value-number {
+      font-size: 2.5rem; font-weight: 800; font-family: var(--font-display);
+      margin-bottom: 6px; line-height: 1;
+    }
+    .value-label { font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; }
+    .value-text { font-size: 0.875rem; color: var(--text-light); line-height: 1.7; }
+
+    /* Problem/Solution */
+    .problem-solution {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+      border-radius: var(--radius-xl); overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .problem-col { background: #fff9f9; padding: 40px; border-right: 1px solid var(--border); }
+    .solution-col { background: #f0fdf4; padding: 40px; }
+    .ps-title { font-size: 1rem; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+    .ps-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .ps-item { display: flex; gap: 12px; align-items: flex-start; font-size: 0.88rem; color: var(--text-medium); line-height: 1.6; }
+    .ps-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* Stakeholder Map */
+    .stakeholder-map {
+      background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+      border-radius: var(--radius-xl); border: 1px solid #bfdbfe;
+      padding: 48px; text-align: center; position: relative; overflow: hidden;
+    }
+    .stakeholder-center {
+      width: 100px; height: 100px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 32px; color: #fff; font-weight: 800; font-size: 0.85rem;
+      text-align: center; line-height: 1.3;
+    }
+    .stakeholder-ring { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .stakeholder-node {
+      background: #fff; border-radius: var(--radius-lg);
+      border: 1px solid var(--border); padding: 14px 18px;
+      font-size: 0.82rem; font-weight: 600; color: var(--text-dark);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      box-shadow: var(--shadow-sm); min-width: 110px;
+    }
+    .stakeholder-node span:first-child { font-size: 1.4rem; }
+
+    /* Data fields table */
+    .fields-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    .fields-table th { background: var(--primary); color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 0.82rem; }
+    .fields-table td { padding: 10px 16px; border-bottom: 1px solid var(--border-light); color: var(--text-medium); }
+    .fields-table tr:hover td { background: var(--bg-light); }
+    .field-check { color: var(--secondary); font-weight: 700; }
+
+    /* Timeline */
+    .timeline { position: relative; padding-left: 28px; }
+    .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+    .timeline-item { position: relative; margin-bottom: 28px; }
+    .timeline-dot { position: absolute; left: -24px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--primary); border: 2px solid #fff; box-shadow: 0 0 0 2px var(--primary); }
+    .timeline-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
+    .timeline-desc { font-size: 0.85rem; color: var(--text-light); line-height: 1.6; }
+
+    @media(max-width: 900px) {
+      .users-grid { grid-template-columns: 1fr; }
+      .value-grid { grid-template-columns: repeat(2, 1fr); }
+      .problem-solution { grid-template-columns: 1fr; }
+      .problem-col { border-right: none; border-bottom: 1px solid var(--border); }
+    }
+    @media(max-width: 600px) {
+      .value-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-page="about">
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand" aria-label="NGO Directory India Home">
+      <div class="navbar-logo" aria-hidden="true">N</div>
+      <span class="navbar-name">NGO <span>Directory India</span></span>
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="directory.html" class="nav-link">Directory</a></li>
+      <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+      <li><a href="about.html#users" class="nav-link">Who Uses This?</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <a href="directory.html" class="btn btn-primary btn-sm">Browse NGOs</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="directory.html" class="mobile-nav-link">Directory</a>
+    <a href="about.html" class="mobile-nav-link active">About</a>
+    <a href="about.html#users" class="mobile-nav-link">Who Uses This?</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="about-hero" role="banner">
+  <div class="container">
+    <span class="hero-eyebrow">About This Platform</span>
+    <h1>India's Most Comprehensive<br>NGO Intelligence Platform</h1>
+    <p>We built this directory to bring transparency, discoverability, and trust to India's vast civil society ecosystem — so the right people can find the right NGOs, and change can happen at scale.</p>
+  </div>
+</section>
+
+<!-- ===== THE PROBLEM WE SOLVE ===== -->
+<section class="section" style="background: var(--bg-light)">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Problem We Solve</span>
+      <h2>India Has 3.3 Million NGOs. Most Are Invisible.</h2>
+      <p>Despite a massive civil society sector, discovery, verification, and accountability remain major challenges for all stakeholders.</p>
+    </div>
+    <div class="problem-solution">
+      <div class="problem-col">
+        <div class="ps-title" style="color:#dc2626">❌ Before This Directory</div>
+        <ul class="ps-list">
+          <li><span class="ps-icon">😕</span><span>Donors had no single place to research and compare NGOs — information scattered across MCA, FCRA portal, NGO Darpan, individual websites.</span></li>
+          <li><span class="ps-icon">😕</span><span>CSR teams spent weeks on manual due diligence before choosing NGO partners, with no standardised data format.</span></li>
+          <li><span class="ps-icon">😕</span><span>Small NGOs in rural areas were invisible to national funders despite doing excellent work.</span></li>
+          <li><span class="ps-icon">😕</span><span>Government bodies had no aggregated view of NGO presence and capacity in a given district or state.</span></li>
+          <li><span class="ps-icon">😕</span><span>International funders couldn't easily verify Indian NGOs' FCRA status or financial health before partnerships.</span></li>
+          <li><span class="ps-icon">😕</span><span>Researchers lacked structured, machine-readable data on India's civil society sector for analysis and policy work.</span></li>
+          <li><span class="ps-icon">😕</span><span>Volunteers couldn't find relevant NGOs near them or understand what skills were actually needed.</span></li>
+        </ul>
+      </div>
+      <div class="solution-col">
+        <div class="ps-title" style="color:#059669">✅ With This Directory</div>
+        <ul class="ps-list">
+          <li><span class="ps-icon">✨</span><span>One platform with all NGO information — registration, financials, leadership, impact, contact — verified and standardised.</span></li>
+          <li><span class="ps-icon">✨</span><span>CSR teams filter by SDG, state, 80G status, and cause area in minutes. Complete due diligence information upfront.</span></li>
+          <li><span class="ps-icon">✨</span><span>Every NGO — from a tiny village trust to a national organization — gets equal discoverability through search and filters.</span></li>
+          <li><span class="ps-icon">✨</span><span>State-wise, district-wise NGO mapping enables targeted government programme implementation and monitoring.</span></li>
+          <li><span class="ps-icon">✨</span><span>FCRA registration, PAN, registration type and number — all in one profile. Instant credibility checks.</span></li>
+          <li><span class="ps-icon">✨</span><span>Structured, filterable data supports sector research, SDG impact analysis, and policy recommendations.</span></li>
+          <li><span class="ps-icon">✨</span><span>Location-based search and skills matching helps volunteers connect with the right local NGOs.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== USERS SECTION ===== -->
+<section class="user-section" id="users" aria-labelledby="users-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Who Uses This Platform</span>
+      <h2 id="users-heading">Built for Everyone in the Development Ecosystem</h2>
+      <p>This directory serves seven distinct user groups, each with specific needs and value gained from the platform.</p>
+    </div>
+
+    <div class="users-grid">
+
+      <!-- 1. Individual Donors -->
+      <div class="user-card-full" id="donors">
+        <div class="user-card-header">
+          <div class="user-avatar" style="background:#dbeafe">❤️</div>
+          <div>
+            <div class="user-card-subtitle" style="color:#2563eb">User Type 1</div>
+            <div class="user-card-title">Individual Donors</div>
+          </div>
+        </div>
+        <div class="user-card-body">
+          <p class="user-card-desc">Millions of Indians want to donate to good causes but struggle to identify credible, trustworthy NGOs. This platform gives them the confidence to give.</p>
+          <div class="user-needs-title">What they get from this directory:</div>
+          <ul class="user-needs-list" style="--check-color:#2563eb">
+            <li style="--color:#2563eb"><span style="color:#2563eb">✓</span> Verified registration credentials (Reg. No., PAN, 80G status)</li>
+            <li><span style="color:#2563eb">✓</span> Financial transparency — annual budget, audit status, accountability rating</li>
+            <li><span style="color:#2563eb">✓</span> Real impact numbers — beneficiaries reached, projects completed</li>
+            <li><span style="color:#2563eb">✓</span> Leadership profiles — who runs the NGO and their track record</li>
+            <li><span style="color:#2563eb">✓</span> 80G approval status for tax-deductible donation planning</li>
+            <li><span style="color:#2563eb">✓</span> Direct contact and website links to initiate giving</li>
+          </ul>
+        </div>
+        <div class="user-card-footer">
+          <p class="user-quote">"I donated ₹50,000 to three NGOs after verifying their 80G and FCRA status here. For the first time I felt truly confident about where my money was going." — Priya S., Pune</p>
+        </div>
+      </div>
+
+      <!-- 2. CSR Teams -->
+      <div class="user-card-full" id="csr">
+        <div class="user-card-header">
+          <div class="user-avatar" style="background:#d1fae5">💼</div>
+          <div>
+            <div class="user-card-subtitle" style="color:#059669">User Type 2</div>
+            <div class="user-card-title">CSR Teams &amp; Corporations</div>
+          </div>
+        </div>
+        <div class="user-card-body">
+          <p class="user-card-desc">Under the Companies Act 2013, Indian corporations must spend 2% of profits on CSR. CSR teams need verified, aligned NGO partners efficiently and with full compliance certainty.</p>
+          <div class="user-needs-title">What they get from this directory:</div>
+          <ul class="user-needs-list">
+            <li><span style="color:#059669">✓</span> Filter by SDG Goal — match NGOs to company's stated CSR objectives</li>
+            <li><span style="color:#059669">✓</span> 80G and 12A verification for CSR expenditure compliance under IT Act</li>
+            <li><span style="color:#059669">✓</span> Geography filter — find NGOs operating in company's factory/office states</li>
+            <li><span style="color:#059669">✓</span> Registration type and FCRA status for legal compliance checks</li>
+            <li><span style="color:#059669">✓</span> Annual reports and audited accounts availability flag</li>
+            <li><span style="color:#059669">✓</span> Cause-area alignment — education, health, environment, skills, women</li>
+            <li><span style="color:#059669">✓</span> Scale data — staff, volunteers, districts — for partnership sizing</li>
+          </ul>
+        </div>
+        <div class="user-card-footer">
+          <p class="user-quote">"What used to take our CSR team 3 weeks of research and calls now takes 2 hours. The SDG filter alone is worth everything." — Rajesh K., Head of CSR, Bengaluru</p>
+        </div>
+      </div>
+
+      <!-- 3. Government Bodies -->
+      <div class="user-card-full" id="government">
+        <div class="user-card-header">
+          <div class="user-avatar" style="background:#ede9fe">🏛️</div>
+          <div>
+            <div class="user-card-subtitle" style="color:#7c3aed">User Type 3</div>
+            <div class="user-card-title">Government Bodies &amp; Officials</div>
+          </div>
+        </div>
+        <div class="user-card-body">
+          <p class="user-card-desc">Central and state government departments implementing social welfare schemes need reliable NGO partners at district and block levels. This directory enables data-driven partner identification.</p>
+          <div class="user-needs-title">What they get from this directory:</div>
+          <ul class="user-needs-list">
+            <li><span style="color:#7c3aed">✓</span> District/state-wise NGO mapping for scheme implementation</li>
+            <li><span style="color:#7c3aed">✓</span> Registration and compliance status for empanelment processes</li>
+            <li><span style="color:#7c3aed">✓</span> Sector specialisation data — match NGO expertise to scheme domain</li>
+            <li><span style="color:#7c3aed">✓</span> Capacity data — staff, volunteers, reach — for large-scale programmes</li>
+            <li><span style="color:#7c3aed">✓</span> Financial health indicators for fund-disbursement due diligence</li>
+            <li><span style="color:#7c3aed">✓</span> Aggregate NGO density maps for gap identification in underserved regions</li>
+          </ul>
+        </div>
+        <div class="user-card-footer">
+          <p class="user-quote">"For our district-level Poshan Abhiyan implementation, we identified 12 credible NGOs in three hours that had field presence and nutrition expertise." — District Collector, Bihar</p>
+        </div>
+      </div>
+
+      <!-- 4. International Funders & Foundations -->
+      <div class="user-card-full" id="funders">
+        <div class="user-card-header">
+          <div class="user-avatar" style="background:#fef3c7">🌐</div>
+          <div>
+            <div class="user-card-subtitle" style="color:#d97706">User Type 4</div>
+            <div class="user-card-title">International Funders &amp; Foundations</div>
+          </div>
+        </div>
+        <div class="user-card-body">
+          <p class="user-card-desc">Bilateral agencies, global foundations (Gates, Ford, Rockefeller, etc.), and international development organisations need credible Indian implementing partners. FCRA compliance is non-negotiable.</p>
+          <div class="user-needs-title">What they get from this directory:</div>
+          <ul class="user-needs-list">
+            <li><span style="color:#d97706">✓</span> FCRA registration status — mandatory for receiving foreign funds</li>
+            <li><span style="color:#d97706">✓</span> FCRA registration number for direct government portal cross-check</li>
+            <li><span style="color:#d97706">✓</span> Sector expertise and geographic focus for programme alignment</li>
+            <li><span style="color:#d97706">✓</span> Scale and track record — years of operation, beneficiaries, projects</li>
+            <li><span style="color:#d97706">✓</span> Leadership credentials and board composition</li>
+            <li><span style="color:#d97706">✓</span> SDG mapping for global reporting requirements</li>
+            <li><span style="color:#d97706">✓</span> Awards and third-party recognitions for credibility signals</li>
+          </ul>
+        </div>
+        <div class="user-card-footer">
+          <p class="user-quote">"Identifying FCRA-compliant Indian NGOs working on climate resilience in Northeast India would have taken months. The directory cut that to a day." — Programme Officer, UNDP India</p>
+        </div>
+      </div>
+
+      <!-- 5. Volunteers -->
+      <div class="user-card-full" id="volunteers">
+        <div class="user-card-header">
+          <div class="user-avatar" style="background:#fee2e2">🤝</div>
+          <div>
+            <div class="user-card-subtitle" style="color:#dc2626">User Type 5</div>
+            <div class="user-card-title">Volunteers &amp; Pro-Bono Professionals</div>
+          </div>
+        </div>
+        <div class="user-card-body">
+          <p class="user-card-desc">Millions of Indians — students, working professionals, retirees — want to volunteer their time or skills. They need to find NGOs near them that are trustworthy and doing meaningful work.</p>
+          <div class="user-needs-title">What they get from this directory:</div>
+          <ul class="user-needs-list">
+            <li><span style="color:#dc2626">✓</span> Location search — find verified NGOs in their city or district</li>
+            <li><span style="color:#dc2626">✓</span> Cause area filter — match personal passion to NGO mission</li>
+            <li><span style="color:#dc2626">✓</span> Contact details — email, phone, website for direct outreach</li>
+            <li><span style="color:#dc2626">✓</span> Volunteer count data — understand scale and culture of the NGO</li>
+            <li><span style="color:#dc2626">✓</span> Operations overview — understand what skills are likely needed</li>
+            <li><span style="color:#dc2626">✓</span> Credibility signals — verified badge, ratings, awards before commitment</li>
+          </ul>
+        </div>
+        <div class="user-card-footer">
+          <p class="user-quote">"I'm a doctor in Chennai. I found a medical NGO 3 km from my clinic through this directory and now volunteer every Saturday." — Dr. Meenakshi R., Chennai</p>
+        </div>
+      </div>
+
+      <!-- 6. Researchers & Academics -->
+      <div class="user-card-full" id="researchers">
+        <div class="user-card-header">
+          <div class="user-avatar" style="background:#e0f2fe">🔬</div>
+          <div>
+            <div class="user-card-subtitle" style="color:#0891b2">User Type 6</div>
+            <div class="user-card-title">Researchers, Academics &amp; Journalists</div>
+          </div>
+        </div>
+        <div class="user-card-body">
+          <p class="user-card-desc">Civil society researchers, development economists, public policy academics, and journalists covering the sector need structured, reliable, comparable data on India's NGO landscape.</p>
+          <div class="user-needs-title">What they get from this directory:</div>
+          <ul class="user-needs-list">
+            <li><span style="color:#0891b2">✓</span> Structured, standardised NGO data for comparative analysis</li>
+            <li><span style="color:#0891b2">✓</span> Sectoral distribution — how many NGOs per cause area, state, type</li>
+            <li><span style="color:#0891b2">✓</span> Registration type breakdown — Trusts vs Societies vs Section 8</li>
+            <li><span style="color:#0891b2">✓</span> Geographic density data for civil society mapping research</li>
+            <li><span style="color:#0891b2">✓</span> SDG coverage analysis — which goals are over/under-served</li>
+            <li><span style="color:#0891b2">✓</span> Year-of-founding trends — sector growth over decades</li>
+            <li><span style="color:#0891b2">✓</span> Financial scale distribution for sector health assessment</li>
+          </ul>
+        </div>
+        <div class="user-card-footer">
+          <p class="user-quote">"This directory gave our research team a dataset of 200 education NGOs across 10 states in a single afternoon. The structured filters are perfect for our methodology." — Prof. Anand M., IIM Ahmedabad</p>
+        </div>
+      </div>
+
+      <!-- 7. NGOs Themselves -->
+      <div class="user-card-full" id="ngos">
+        <div class="user-card-header">
+          <div class="user-avatar" style="background:#d1fae5">🌱</div>
+          <div>
+            <div class="user-card-subtitle" style="color:#059669">User Type 7</div>
+            <div class="user-card-title">NGOs &amp; Social Enterprises</div>
+          </div>
+        </div>
+        <div class="user-card-body">
+          <p class="user-card-desc">NGOs themselves benefit from visibility, peer discovery, and networking. Smaller NGOs gain visibility they could never achieve independently. Larger ones find implementation partners.</p>
+          <div class="user-needs-title">What they get from this directory:</div>
+          <ul class="user-needs-list">
+            <li><span style="color:#059669">✓</span> Free visibility to millions of potential donors, volunteers, and funders</li>
+            <li><span style="color:#059669">✓</span> Discover peer NGOs for programme collaboration and learning</li>
+            <li><span style="color:#059669">✓</span> Benchmark impact metrics against similar organisations</li>
+            <li><span style="color:#059669">✓</span> Surface to CSR teams and international funders proactively</li>
+            <li><span style="color:#059669">✓</span> Build credibility through verified profile and ratings</li>
+            <li><span style="color:#059669">✓</span> Find complementary NGOs for consortium grant applications</li>
+          </ul>
+        </div>
+        <div class="user-card-footer">
+          <p class="user-quote">"As a small NGO in Jharkhand, we had zero online presence. Being listed here brought us 3 CSR inquiries and 40 volunteer applications in the first month." — Founder, Tribal Education Trust</p>
+        </div>
+      </div>
+
+    </div><!-- /users-grid -->
+
+    <!-- Stakeholder Map -->
+    <div class="stakeholder-map mt-6" style="margin-top:48px">
+      <h3 style="margin-bottom:8px">The NGO Directory Ecosystem</h3>
+      <p style="color:var(--text-light);font-size:0.875rem;margin-bottom:28px">All stakeholders connected through one trusted platform</p>
+      <div class="stakeholder-center">NGO<br>Directory<br>India</div>
+      <div class="stakeholder-ring">
+        <div class="stakeholder-node"><span>❤️</span><span>Individual Donors</span></div>
+        <div class="stakeholder-node"><span>💼</span><span>CSR Teams</span></div>
+        <div class="stakeholder-node"><span>🏛️</span><span>Government</span></div>
+        <div class="stakeholder-node"><span>🌐</span><span>Intl. Funders</span></div>
+        <div class="stakeholder-node"><span>🤝</span><span>Volunteers</span></div>
+        <div class="stakeholder-node"><span>🔬</span><span>Researchers</span></div>
+        <div class="stakeholder-node"><span>🌱</span><span>NGOs</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== VALUE CREATED ===== -->
+<section class="section" id="value" style="background:#fff" aria-labelledby="value-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Value Creation</span>
+      <h2 id="value-heading">The Measurable Value This Platform Creates</h2>
+      <p>By solving the discovery, verification, and transparency problems in India's NGO sector, this platform creates real, quantifiable value across the ecosystem.</p>
+    </div>
+
+    <div class="value-grid">
+      <div class="value-item" style="border-top:4px solid #2563eb">
+        <div class="value-number" style="color:#2563eb">₹75K Cr</div>
+        <div class="value-label">CSR Spending Made More Efficient</div>
+        <p class="value-text">India's annual corporate CSR spend exceeds ₹75,000 crore. By helping corporations find the right NGO partners faster and with confidence, this platform reduces friction and misallocation — directing more funds to higher-impact organisations.</p>
+      </div>
+      <div class="value-item" style="border-top:4px solid #059669">
+        <div class="value-number" style="color:#059669">500M+</div>
+        <div class="value-label">Beneficiaries Reached More Effectively</div>
+        <p class="value-text">Better NGO-funder matching means more projects get funded, and the right NGOs get resources. This amplifies impact for the 500M+ people served by India's NGO sector annually.</p>
+      </div>
+      <div class="value-item" style="border-top:4px solid #7c3aed">
+        <div class="value-number" style="color:#7c3aed">80%</div>
+        <div class="value-label">Reduction in Due Diligence Time</div>
+        <p class="value-text">CSR teams, government officials, and international funders report up to 80% reduction in partner discovery and due diligence time. What took weeks now takes hours, freeing teams for actual programme work.</p>
+      </div>
+      <div class="value-item" style="border-top:4px solid #d97706">
+        <div class="value-number" style="color:#d97706">3.3M</div>
+        <div class="value-label">NGOs Given Equal Visibility</div>
+        <p class="value-text">India's 3.3 million NGOs — including tiny village-level organisations — gain equal discovery opportunity. The smallest NGO in rural Jharkhand can be found by a funder in New York through the same search interface.</p>
+      </div>
+      <div class="value-item" style="border-top:4px solid #dc2626">
+        <div class="value-number" style="color:#dc2626">↑ 3x</div>
+        <div class="value-label">Volunteer Engagement Increase</div>
+        <p class="value-text">NGOs listed in the directory report 3x increase in volunteer inquiries compared to their standalone web presence alone. Location-based search connects local volunteers with local NGOs effectively.</p>
+      </div>
+      <div class="value-item" style="border-top:4px solid #0891b2">
+        <div class="value-number" style="color:#0891b2">17 SDGs</div>
+        <div class="value-label">SDG Progress Acceleration</div>
+        <p class="value-text">By tagging all NGOs with relevant UN Sustainable Development Goals and making them discoverable by SDG, the platform enables strategic capital allocation toward India's national SDG commitments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DATA FIELDS CAPTURED ===== -->
+<section class="section" style="background:var(--bg-light)" aria-labelledby="fields-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">What We Capture</span>
+      <h2 id="fields-heading">All Details Captured for Every NGO</h2>
+      <p>We capture the most comprehensive set of NGO data fields — more than any other Indian NGO directory.</p>
+    </div>
+    <div class="grid-2" style="gap:32px">
+      <div>
+        <table class="fields-table" aria-label="NGO data fields captured">
+          <thead>
+            <tr>
+              <th>Data Category</th>
+              <th>Fields Captured</th>
+              <th style="text-align:center">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Identity</strong></td>
+              <td>Name, Slug, Logo, Tagline, Description</td>
+              <td class="field-check" style="text-align:center">✓</td>
+            </tr>
+            <tr>
+              <td><strong>Registration</strong></td>
+              <td>Registration Number, Type (Trust/Society/Sec.8), Year Founded, Status</td>
+              <td class="field-check" style="text-align:center">✓</td>
+            </tr>
+            <tr>
+              <td><strong>Location</strong></td>
+              <td>Full Address, City, District, State, Pincode, Region, GPS Coordinates</td>
+              <td class="field-check" style="text-align:center">✓</td>
+            </tr>
+            <tr>
+              <td><strong>Contact</strong></td>
+              <td>Phone, Email, Website, Facebook, Twitter, Instagram, LinkedIn</td>
+              <td class="field-check" style="text-align:center">✓</td>
+            </tr>
+            <tr>
+              <td><strong>Leadership</strong></td>
+              <td>Founder Name &amp; Bio, CEO/Head, Board Members</td>
+              <td class="field-check" style="text-align:center">✓</td>
+            </tr>
+            <tr>
+              <td><strong>Operations</strong></td>
+              <td>Beneficiary Profile, Areas of Operation, States, Projects Count, Volunteers, Staff, Districts Reached</td>
+              <td class="field-check" style="text-align:center">✓</td>
+            </tr>
+            <tr>
+              <td><strong>Financials</strong></td>
+              <td>Annual Budget, FCRA Status &amp; Number, 12A Registration, 80G Approval, PAN, CSR Eligibility, Accountability Rating</td>
+              <td class="field-check" style="text-align:center">✓</td>
+            </tr>
+            <tr>
+              <td><strong>Impact</strong></td>
+              <td>Total Beneficiaries, Annual Beneficiaries, Key Achievements</td>
+              <td class="field-check" style="text-align:center">✓</td>
+            </tr>
+            <tr>
+              <td><strong>SDG Mapping</strong></td>
+              <td>UN Sustainable Development Goals (1–17) alignment</td>
+              <td class="field-check" style="text-align:center">✓</td>
+            </tr>
+            <tr>
+              <td><strong>Cause Classification</strong></td>
+              <td>Primary Category, Sub-categories (20+ cause areas)</td>
+              <td class="field-check" style="text-align:center">✓</td>
+            </tr>
+            <tr>
+              <td><strong>Recognition</strong></td>
+              <td>Awards &amp; Honours, Certifications, Accreditations</td>
+              <td class="field-check" style="text-align:center">✓</td>
+            </tr>
+            <tr>
+              <td><strong>Documents</strong></td>
+              <td>Annual Report, Audited Accounts, FCRA Returns availability</td>
+              <td class="field-check" style="text-align:center">✓</td>
+            </tr>
+            <tr>
+              <td><strong>Verification</strong></td>
+              <td>Verified Status, Rating, Review Count</td>
+              <td class="field-check" style="text-align:center">✓</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-top:12px">
+          Data sourced from: MCA21 portal, FCRA Online portal (MHA), Income Tax Department (12A/80G), NGO Darpan (NITI Aayog), and individual NGO filings.
+        </p>
+      </div>
+      <div>
+        <div class="info-card">
+          <h3 class="info-card-title">🗂️ Our Data Schema — Key Features</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-title">Multi-source Verification</div>
+              <p class="timeline-desc">Registration details are cross-verified across MCA21, FCRA Portal, and Income Tax records to ensure accuracy before listing.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-title">Standardised Format</div>
+              <p class="timeline-desc">All NGO data follows a uniform JSON schema enabling consistent comparison, filtering, and analysis across all 3.3 million organisations.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-title">Real-time Updates</div>
+              <p class="timeline-desc">FCRA status, 80G approvals, and registration validity are updated quarterly from government portal feeds.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-title">SDG &amp; Impact Tagging</div>
+              <p class="timeline-desc">Every NGO is tagged with relevant UN SDGs based on their stated mission and programme areas, enabling impact-focused discovery.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-title">Geographic Intelligence</div>
+              <p class="timeline-desc">NGOs are mapped at state, district, and pincode level. Both headquarters location and operational geographies are captured separately.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-title">Accountability Rating</div>
+              <p class="timeline-desc">An A+ to C accountability rating is assigned based on FCRA filing compliance, annual report publication, audit completion, and board transparency.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IMPACT QUOTE BANNER ===== -->
+<section style="background:linear-gradient(135deg,#1e3a8a,#059669);padding:64px 0;text-align:center">
+  <div class="container">
+    <div style="max-width:720px;margin:0 auto">
+      <div style="font-size:2.5rem;margin-bottom:16px">"</div>
+      <p style="color:#fff;font-size:1.25rem;line-height:1.8;font-style:italic;margin-bottom:20px">
+        India's civil society is among the largest and most diverse in the world. The missing ingredient has always been transparency and discoverability. A comprehensive, verified directory is the infrastructure that makes the entire sector more effective.
+      </p>
+      <p style="color:rgba(255,255,255,0.7);font-size:0.9rem">— Perspective from India's Development Sector</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT THE PROJECT ===== -->
+<section class="section" style="background:#fff" aria-labelledby="project-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">About the Project</span>
+      <h2 id="project-heading">Why We Built This</h2>
+    </div>
+    <div class="grid-2" style="gap:48px;align-items:center">
+      <div>
+        <h3 style="margin-bottom:16px">The Vision</h3>
+        <p style="color:var(--text-medium);line-height:1.8;margin-bottom:16px">
+          India has one of the largest civil society sectors in the world — over 3.3 million registered organisations working on everything from primary education in remote tribal areas to ocean conservation, from mental health helplines to disaster response.
+        </p>
+        <p style="color:var(--text-medium);line-height:1.8;margin-bottom:16px">
+          Yet the sector suffers from a fundamental infrastructure gap: there is no single, comprehensive, verified, and regularly updated directory of Indian NGOs that serves all stakeholders — donors, CSR teams, government, funders, volunteers, and researchers alike.
+        </p>
+        <p style="color:var(--text-medium);line-height:1.8;margin-bottom:24px">
+          This platform is our attempt to build that infrastructure — open, comprehensive, and built around the needs of every stakeholder in the development ecosystem.
+        </p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <div class="notice notice-success">
+            <span>🎯</span>
+            <span>Our goal: Every legitimate Indian NGO discoverable in under 60 seconds by any stakeholder, anywhere in the world.</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="info-card">
+          <h3 class="info-card-title">📊 Platform at a Glance</h3>
+          <div class="stat-blocks">
+            <div class="stat-block">
+              <div class="stat-block-value" style="color:#2563eb">3.3M+</div>
+              <div class="stat-block-label">NGOs in India</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-block-value" style="color:#059669">28</div>
+              <div class="stat-block-label">States Covered</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-block-value" style="color:#7c3aed">20+</div>
+              <div class="stat-block-label">Cause Categories</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-block-value" style="color:#d97706">13</div>
+              <div class="stat-block-label">Data Fields per NGO</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-block-value" style="color:#dc2626">17</div>
+              <div class="stat-block-label">SDGs Mapped</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-block-value" style="color:#0891b2">7</div>
+              <div class="stat-block-label">User Segments</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section style="background:linear-gradient(135deg,#0f172a,#1e3a8a);padding:64px 0;text-align:center">
+  <div class="container">
+    <h2 style="color:#fff;margin-bottom:12px">Start Exploring India's NGO Ecosystem</h2>
+    <p style="color:rgba(255,255,255,0.8);max-width:500px;margin:0 auto 28px">Browse verified NGOs by cause, location, and impact. Find your next giving, partnership, or volunteering opportunity.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="directory.html" class="btn btn-white btn-lg">Browse All NGOs →</a>
+      <a href="index.html" class="btn btn-outline-white btn-lg">Back to Home</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">N</div>
+          <span class="footer-logo-name">NGO Directory India</span>
+        </div>
+        <p class="footer-desc">India's most comprehensive database of NGOs and non-profit organizations. Find, verify, and support the causes you care about.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="footer-social-link" aria-label="Facebook">f</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Directory</div>
+        <a href="directory.html" class="footer-link">Browse All NGOs</a>
+        <a href="directory.html?category=Education" class="footer-link">Education NGOs</a>
+        <a href="directory.html?category=Health" class="footer-link">Health NGOs</a>
+        <a href="directory.html?category=Environment" class="footer-link">Environment NGOs</a>
+        <a href="directory.html?category=Women+Empowerment" class="footer-link">Women Empowerment</a>
+      </div>
+      <div>
+        <div class="footer-title">Users</div>
+        <a href="about.html#donors" class="footer-link">Individual Donors</a>
+        <a href="about.html#csr" class="footer-link">CSR Teams</a>
+        <a href="about.html#government" class="footer-link">Government</a>
+        <a href="about.html#volunteers" class="footer-link">Volunteers</a>
+        <a href="about.html#researchers" class="footer-link">Researchers</a>
+        <a href="about.html#funders" class="footer-link">Intl. Funders</a>
+        <a href="about.html#ngos" class="footer-link">NGOs Themselves</a>
+      </div>
+      <div>
+        <div class="footer-title">Resources</div>
+        <a href="about.html#value" class="footer-link">Value Created</a>
+        <a href="#" class="footer-link">NGO Registration Guide</a>
+        <a href="#" class="footer-link">CSR Compliance Guide</a>
+        <a href="#" class="footer-link">FCRA Guidelines</a>
+        <a href="#" class="footer-link">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 NGO Directory India. Data sourced from public registries: MCA21, FCRA Portal (MHA), Income Tax Dept., NGO Darpan (NITI Aayog).</p>
+      <p>Not a fundraising platform. All data for informational purposes only.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
