@@ -1,0 +1,1021 @@
+{
+  "metadata": {
+    "totalNGOs": 30,
+    "lastUpdated": "2026-02-22",
+    "source": "NGO Directory India",
+    "version": "1.0"
+  },
+  "ngos": [
+    {
+      "id": "NGO001",
+      "name": "Pratham Education Foundation",
+      "slug": "pratham-education-foundation",
+      "logo": "https://via.placeholder.com/80x80/2563EB/FFFFFF?text=PEF",
+      "tagline": "Every Child in School and Learning Well",
+      "description": "Pratham is one of the largest non-governmental organizations in India, working to provide quality education to underprivileged children. Founded in Mumbai in 1995, Pratham reaches millions of children annually across 21 states through innovative, low-cost, and replicable interventions in education.",
+      "registrationNumber": "E-3963(M)",
+      "registrationType": "Trust",
+      "yearFounded": 1995,
+      "status": "Active",
+      "verified": true,
+      "rating": 4.8,
+      "reviewCount": 342,
+      "category": ["Education"],
+      "subCategory": ["Primary Education", "Literacy", "Remedial Education", "Vocational Training"],
+      "sdgGoals": [4, 1, 10],
+      "location": {
+        "address": "Y.B. Chavan Centre, Gen. J. Bhosale Marg",
+        "city": "Mumbai",
+        "district": "Mumbai",
+        "state": "Maharashtra",
+        "pincode": "400021",
+        "region": "West",
+        "coordinates": { "lat": 18.9322, "lng": 72.8264 }
+      },
+      "contact": {
+        "phone": "+91-22-2200-1430",
+        "email": "info@pratham.org",
+        "website": "https://www.pratham.org",
+        "socialMedia": {
+          "facebook": "PrathamEducation",
+          "twitter": "@pratham_india",
+          "instagram": "pratham_education",
+          "linkedin": "pratham-education-foundation"
+        }
+      },
+      "leadership": {
+        "founderName": "Madhav Chavan & Farida Lambay",
+        "founderBio": "Co-founded by Dr. Madhav Chavan and Farida Lambay in partnership with UNICEF Mumbai.",
+        "ceoName": "Rukmini Banerji",
+        "boardMembers": ["Dr. Madhav Chavan", "Farida Lambay", "Rukmini Banerji", "Rohini Nilekani"]
+      },
+      "operations": {
+        "beneficiaries": "Children aged 3-14 years from low-income families",
+        "areasOfOperation": ["Pre-school Education", "School Education", "Vocational Training", "Digital Literacy"],
+        "statesOfOperation": ["Maharashtra", "Delhi", "Uttar Pradesh", "Bihar", "Rajasthan", "Gujarat", "Karnataka", "Andhra Pradesh", "Telangana", "Odisha", "Jharkhand", "West Bengal", "Assam", "Haryana", "Punjab", "Himachal Pradesh", "Uttarakhand", "Chhattisgarh", "Madhya Pradesh", "Jammu & Kashmir", "Tamil Nadu"],
+        "projectsCount": 47,
+        "volunteersCount": 75000,
+        "staffCount": 6000,
+        "districtsReached": 300
+      },
+      "financials": {
+        "annualBudget": "₹500 Crore+",
+        "fcraRegistered": true,
+        "fcraNumber": "083780476",
+        "registration12A": true,
+        "registration80G": true,
+        "panNumber": "AAATP0396M",
+        "csr": true,
+        "accountabilityRating": "A+"
+      },
+      "impact": {
+        "totalBeneficiaries": "75 Million+",
+        "yearlyBeneficiaries": "5 Million+",
+        "keyAchievements": [
+          "Developed Annual Status of Education Report (ASER) – India's largest annual rural education survey",
+          "Read India program improved reading levels of 30 million children",
+          "Learn camps reached 6 million children in 2024",
+          "Vocational training provided to 500,000 youth"
+        ]
+      },
+      "certifications": ["GiveIndia Verified", "CAF India Certified", "GIVE Foundation Partner"],
+      "awards": ["WISE Prize for Education", "Skoll Award for Social Entrepreneurship", "Rockefeller Foundation Award"],
+      "documents": {
+        "annualReport": "2024-25 Annual Report Available",
+        "auditedAccounts": true,
+        "fcraReturns": true
+      }
+    },
+    {
+      "id": "NGO002",
+      "name": "CRY – Child Rights and You",
+      "slug": "cry-child-rights-and-you",
+      "logo": "https://via.placeholder.com/80x80/DC2626/FFFFFF?text=CRY",
+      "tagline": "Restoring Childhood, Fulfilling Rights",
+      "description": "CRY is a non-profit organization that works to ensure lasting and effective change in the lives of underprivileged Indian children. Founded in 1979 by Rippan Kapur, CRY partners with grassroots organizations across India to address issues of child rights, child labor, and child education.",
+      "registrationNumber": "F-10858",
+      "registrationType": "Trust",
+      "yearFounded": 1979,
+      "status": "Active",
+      "verified": true,
+      "rating": 4.7,
+      "reviewCount": 512,
+      "category": ["Child Welfare", "Education"],
+      "subCategory": ["Child Rights", "Child Labour", "Education", "Child Health", "Child Protection"],
+      "sdgGoals": [1, 4, 8, 16],
+      "location": {
+        "address": "189 Andheri-Kurla Road",
+        "city": "Mumbai",
+        "district": "Mumbai",
+        "state": "Maharashtra",
+        "pincode": "400059",
+        "region": "West",
+        "coordinates": { "lat": 19.1136, "lng": 72.8697 }
+      },
+      "contact": {
+        "phone": "+91-22-2826-5lid",
+        "email": "info@cry.org",
+        "website": "https://www.cry.org",
+        "socialMedia": {
+          "facebook": "CRYChildRightsAndYou",
+          "twitter": "@CRY_India",
+          "instagram": "cry_india",
+          "linkedin": "cry-child-rights-and-you"
+        }
+      },
+      "leadership": {
+        "founderName": "Rippan Kapur",
+        "founderBio": "Founded by Rippan Kapur in 1979 with a mission to ensure child rights are fulfilled across India.",
+        "ceoName": "Puja Marwaha",
+        "boardMembers": ["Puja Marwaha", "Ingrid Srinath", "V.R. Ferose"]
+      },
+      "operations": {
+        "beneficiaries": "Children below 18 years from marginalized communities",
+        "areasOfOperation": ["Child Rights Advocacy", "Primary Education", "Child Labour Elimination", "Child Health"],
+        "statesOfOperation": ["Maharashtra", "Delhi", "West Bengal", "Tamil Nadu", "Rajasthan", "Odisha", "Jharkhand", "Karnataka", "Telangana"],
+        "projectsCount": 32,
+        "volunteersCount": 2000,
+        "staffCount": 350,
+        "districtsReached": 34
+      },
+      "financials": {
+        "annualBudget": "₹80 Crore+",
+        "fcraRegistered": true,
+        "fcraNumber": "083780037",
+        "registration12A": true,
+        "registration80G": true,
+        "panNumber": "AAACC1234P",
+        "csr": true,
+        "accountabilityRating": "A+"
+      },
+      "impact": {
+        "totalBeneficiaries": "3 Million+",
+        "yearlyBeneficiaries": "800,000+",
+        "keyAchievements": [
+          "Supported 214 grassroots organizations across 9 states",
+          "Ensured school enrolment for 500,000 out-of-school children",
+          "Removed 50,000+ children from child labour",
+          "Strengthened child protection systems in 34 districts"
+        ]
+      },
+      "certifications": ["GiveIndia Verified", "CAF India Certified"],
+      "awards": ["Rajiv Gandhi Khel Ratna", "National Award for Child Welfare"],
+      "documents": {
+        "annualReport": "2024-25 Annual Report Available",
+        "auditedAccounts": true,
+        "fcraReturns": true
+      }
+    },
+    {
+      "id": "NGO003",
+      "name": "Helpage India",
+      "slug": "helpage-india",
+      "logo": "https://via.placeholder.com/80x80/7C3AED/FFFFFF?text=HAI",
+      "tagline": "Dignity and Care for India's Elderly",
+      "description": "HelpAge India is a leading charity in India working with and for disadvantaged elderly people to lead dignified, active, healthy and secure lives. Founded in 1978, HelpAge reaches over 3.6 million older persons annually across more than 26 states.",
+      "registrationNumber": "S/28632",
+      "registrationType": "Society",
+      "yearFounded": 1978,
+      "status": "Active",
+      "verified": true,
+      "rating": 4.6,
+      "reviewCount": 289,
+      "category": ["Elderly Care", "Health"],
+      "subCategory": ["Senior Citizen Welfare", "Healthcare", "Livelihood", "Disaster Relief"],
+      "sdgGoals": [1, 3, 10],
+      "location": {
+        "address": "C-14, Qutab Institutional Area",
+        "city": "New Delhi",
+        "district": "South Delhi",
+        "state": "Delhi",
+        "pincode": "110016",
+        "region": "North",
+        "coordinates": { "lat": 28.5323, "lng": 77.1866 }
+      },
+      "contact": {
+        "phone": "+91-11-4168-8955",
+        "email": "helpage@helpageindia.org",
+        "website": "https://www.helpageindia.org",
+        "socialMedia": {
+          "facebook": "HelpAgeIndia",
+          "twitter": "@HelpAgeIndia",
+          "instagram": "helpageindia",
+          "linkedin": "helpage-india"
+        }
+      },
+      "leadership": {
+        "founderName": "Mathew Cherian",
+        "founderBio": "HelpAge India was founded by a group of compassionate individuals to serve India's growing elderly population.",
+        "ceoName": "Rohit Prasad",
+        "boardMembers": ["Rohit Prasad", "Mathew Cherian", "Dr. Pronab Sen"]
+      },
+      "operations": {
+        "beneficiaries": "Senior citizens aged 60+ from low-income groups",
+        "areasOfOperation": ["Elder Healthcare", "Livelihood Support", "Disaster Relief", "Advocacy", "Mobile Healthcare"],
+        "statesOfOperation": ["Delhi", "Maharashtra", "Karnataka", "Tamil Nadu", "Andhra Pradesh", "Telangana", "West Bengal", "Rajasthan", "Uttar Pradesh", "Bihar", "Odisha", "Gujarat", "Madhya Pradesh", "Chhattisgarh", "Jharkhand", "Assam", "Himachal Pradesh", "Uttarakhand", "Punjab", "Haryana", "Kerala", "Goa", "Jammu & Kashmir"],
+        "projectsCount": 38,
+        "volunteersCount": 5000,
+        "staffCount": 1200,
+        "districtsReached": 200
+      },
+      "financials": {
+        "annualBudget": "₹150 Crore+",
+        "fcraRegistered": true,
+        "fcraNumber": "083781234",
+        "registration12A": true,
+        "registration80G": true,
+        "panNumber": "AAATH1234A",
+        "csr": true,
+        "accountabilityRating": "A"
+      },
+      "impact": {
+        "totalBeneficiaries": "40 Million+",
+        "yearlyBeneficiaries": "3.6 Million+",
+        "keyAchievements": [
+          "300+ mobile healthcare units serving rural elderly",
+          "1.2 million+ free eye surgeries conducted",
+          "200,000+ elderly provided livelihood support",
+          "Policy advocacy for elderly rights at national level"
+        ]
+      },
+      "certifications": ["GiveIndia Verified", "FCRA Compliant"],
+      "awards": ["National Award for Senior Citizens", "Times of India Social Impact Award"],
+      "documents": {
+        "annualReport": "2024-25 Annual Report Available",
+        "auditedAccounts": true,
+        "fcraReturns": true
+      }
+    },
+    {
+      "id": "NGO004",
+      "name": "Goonj",
+      "slug": "goonj",
+      "logo": "https://via.placeholder.com/80x80/059669/FFFFFF?text=GOO",
+      "tagline": "Turning Urban Surplus into Rural Resource",
+      "description": "Goonj is a New Delhi-based NGO that works on urban-to-rural resource distribution. It turns urban surplus (clothes, household materials) into rural resource, and links city-based donations with rural development. Founded by Anshu Gupta in 1999, Goonj has pioneered the concept of Cloth as a basic need.",
+      "registrationNumber": "S-53894",
+      "registrationType": "Society",
+      "yearFounded": 1999,
+      "status": "Active",
+      "verified": true,
+      "rating": 4.9,
+      "reviewCount": 418,
+      "category": ["Rural Development", "Disaster Relief"],
+      "subCategory": ["Resource Distribution", "Livelihood", "Disaster Relief", "Menstrual Health"],
+      "sdgGoals": [1, 5, 10, 11, 12],
+      "location": {
+        "address": "J-93, Sarita Vihar",
+        "city": "New Delhi",
+        "district": "South East Delhi",
+        "state": "Delhi",
+        "pincode": "110076",
+        "region": "North",
+        "coordinates": { "lat": 28.5355, "lng": 77.2948 }
+      },
+      "contact": {
+        "phone": "+91-11-2632-2124",
+        "email": "mail@goonj.org",
+        "website": "https://goonj.org",
+        "socialMedia": {
+          "facebook": "goonj.org",
+          "twitter": "@goonj",
+          "instagram": "goonj_ngo",
+          "linkedin": "goonj"
+        }
+      },
+      "leadership": {
+        "founderName": "Anshu Gupta",
+        "founderBio": "Anshu Gupta is a journalist-turned-social entrepreneur who founded Goonj to address material deprivation as a dignity issue.",
+        "ceoName": "Anshu Gupta",
+        "boardMembers": ["Anshu Gupta", "Meenakshi Gupta"]
+      },
+      "operations": {
+        "beneficiaries": "Rural communities, disaster-affected populations, urban poor",
+        "areasOfOperation": ["Material Resource Distribution", "Disaster Relief", "Community Development", "Menstrual Health (RATI)", "Urban Volunteering"],
+        "statesOfOperation": ["Delhi", "Uttar Pradesh", "Bihar", "Rajasthan", "Jharkhand", "West Bengal", "Maharashtra", "Karnataka", "Tamil Nadu", "Assam", "Uttarakhand", "Himachal Pradesh", "Odisha"],
+        "projectsCount": 25,
+        "volunteersCount": 500000,
+        "staffCount": 400,
+        "districtsReached": 150
+      },
+      "financials": {
+        "annualBudget": "₹60 Crore+",
+        "fcraRegistered": true,
+        "fcraNumber": "083781999",
+        "registration12A": true,
+        "registration80G": true,
+        "panNumber": "AAATG1999G",
+        "csr": true,
+        "accountabilityRating": "A+"
+      },
+      "impact": {
+        "totalBeneficiaries": "10 Million+",
+        "yearlyBeneficiaries": "1 Million+",
+        "keyAchievements": [
+          "Processed 5,000+ tonnes of material annually",
+          "RATI program: 300,000+ women provided menstrual hygiene solutions",
+          "Responded to 50+ disaster situations across India",
+          "Cloth for Work program in 150+ districts"
+        ]
+      },
+      "certifications": ["Magsaysay Award Organization", "GiveIndia Verified"],
+      "awards": ["Ramon Magsaysay Award 2015", "CNN-IBN Real Heroes Award", "Ashoka Fellow"],
+      "documents": {
+        "annualReport": "2024-25 Annual Report Available",
+        "auditedAccounts": true,
+        "fcraReturns": true
+      }
+    },
+    {
+      "id": "NGO005",
+      "name": "Smile Foundation",
+      "slug": "smile-foundation",
+      "logo": "https://via.placeholder.com/80x80/F59E0B/FFFFFF?text=SF",
+      "tagline": "Welfare of Children, Women and Communities",
+      "description": "Smile Foundation is a national development organization directly benefiting over 1.5 million children and families across 2,000+ villages and urban slums. Working since 2002 in the areas of education, healthcare, livelihood, and women empowerment.",
+      "registrationNumber": "1950/03",
+      "registrationType": "Society",
+      "yearFounded": 2002,
+      "status": "Active",
+      "verified": true,
+      "rating": 4.5,
+      "reviewCount": 201,
+      "category": ["Education", "Health", "Women Empowerment"],
+      "subCategory": ["School Education", "Mobile Healthcare", "Livelihood", "Women Empowerment"],
+      "sdgGoals": [1, 3, 4, 5, 10],
+      "location": {
+        "address": "11, Hanuman Road, Connaught Place",
+        "city": "New Delhi",
+        "district": "New Delhi",
+        "state": "Delhi",
+        "pincode": "110001",
+        "region": "North",
+        "coordinates": { "lat": 28.6328, "lng": 77.2197 }
+      },
+      "contact": {
+        "phone": "+91-11-4300-5094",
+        "email": "info@smilefoundationindia.org",
+        "website": "https://www.smilefoundationindia.org",
+        "socialMedia": {
+          "facebook": "SmileFoundationIndia",
+          "twitter": "@smilefoundation",
+          "instagram": "smilefoundationindia",
+          "linkedin": "smile-foundation"
+        }
+      },
+      "leadership": {
+        "founderName": "Santanu Mishra",
+        "founderBio": "Co-founded by Santanu Mishra to empower underprivileged communities through sustainable development.",
+        "ceoName": "Santanu Mishra",
+        "boardMembers": ["Santanu Mishra", "Shashi Mishra", "Ajay Kumar"]
+      },
+      "operations": {
+        "beneficiaries": "Children, women, and families from underserved communities",
+        "areasOfOperation": ["Education (Mission Education)", "Healthcare (Smile on Wheels)", "Livelihood (STeP)", "Women Empowerment (SWATI)"],
+        "statesOfOperation": ["Delhi", "Uttar Pradesh", "Rajasthan", "Bihar", "Jharkhand", "Odisha", "West Bengal", "Maharashtra", "Karnataka", "Telangana", "Assam"],
+        "projectsCount": 28,
+        "volunteersCount": 3000,
+        "staffCount": 700,
+        "districtsReached": 120
+      },
+      "financials": {
+        "annualBudget": "₹80 Crore+",
+        "fcraRegistered": true,
+        "fcraNumber": "083782002",
+        "registration12A": true,
+        "registration80G": true,
+        "panNumber": "AAATS2002S",
+        "csr": true,
+        "accountabilityRating": "A"
+      },
+      "impact": {
+        "totalBeneficiaries": "1.5 Million+",
+        "yearlyBeneficiaries": "750,000+",
+        "keyAchievements": [
+          "150+ Smile on Wheels mobile healthcare units",
+          "2,000+ villages and urban slums covered",
+          "300,000+ students in Mission Education program",
+          "50,000+ youth skilled through STeP program"
+        ]
+      },
+      "certifications": ["GiveIndia Verified", "Credibility Alliance Member"],
+      "awards": ["NDTV 25 Greatest Global Living Legends", "ET Now Social Enterprise Award"],
+      "documents": {
+        "annualReport": "2024-25 Annual Report Available",
+        "auditedAccounts": true,
+        "fcraReturns": true
+      }
+    },
+    {
+      "id": "NGO006",
+      "name": "Akshaya Patra Foundation",
+      "slug": "akshaya-patra-foundation",
+      "logo": "https://via.placeholder.com/80x80/EF4444/FFFFFF?text=AP",
+      "tagline": "No Child in India Shall be Deprived of Education Because of Hunger",
+      "description": "The Akshaya Patra Foundation is a non-profit organization in India that runs the world's largest NGO-run Mid Day Meal scheme, serving freshly cooked meals to 2.1 million children across 24,000+ schools in India daily. Founded in 2000 in Bengaluru.",
+      "registrationNumber": "BK-IV-4/04-05",
+      "registrationType": "Section 8 Company",
+      "yearFounded": 2000,
+      "status": "Active",
+      "verified": true,
+      "rating": 4.9,
+      "reviewCount": 623,
+      "category": ["Education", "Nutrition"],
+      "subCategory": ["Mid-Day Meals", "School Nutrition", "Food Security"],
+      "sdgGoals": [2, 4, 1],
+      "location": {
+        "address": "HQ, Rajajinagar",
+        "city": "Bengaluru",
+        "district": "Bengaluru Urban",
+        "state": "Karnataka",
+        "pincode": "560010",
+        "region": "South",
+        "coordinates": { "lat": 12.9912, "lng": 77.5546 }
+      },
+      "contact": {
+        "phone": "+91-80-3014-7777",
+        "email": "info@akshayapatra.org",
+        "website": "https://www.akshayapatra.org",
+        "socialMedia": {
+          "facebook": "TheAkshayaPatra",
+          "twitter": "@AkshayaPatra",
+          "instagram": "akshayapatrafoundation",
+          "linkedin": "akshaya-patra-foundation"
+        }
+      },
+      "leadership": {
+        "founderName": "Madhu Pandit Dasa",
+        "founderBio": "Founded by Madhu Pandit Dasa, President of ISKCON Bengaluru, with a mission to eradicate hunger among school children.",
+        "ceoName": "Shridhar Venkat",
+        "boardMembers": ["Madhu Pandit Dasa", "Chanchalapathi Dasa", "Shridhar Venkat"]
+      },
+      "operations": {
+        "beneficiaries": "Government school children from Class 1 to 8",
+        "areasOfOperation": ["Mid-Day Meal Program", "School Nutrition", "Kitchen Infrastructure"],
+        "statesOfOperation": ["Karnataka", "Rajasthan", "Gujarat", "Uttar Pradesh", "Odisha", "Andhra Pradesh", "Telangana", "Uttarakhand", "Assam", "Chhattisgarh", "Tamil Nadu", "Madhya Pradesh", "Delhi", "Jharkhand"],
+        "projectsCount": 14,
+        "volunteersCount": 1000,
+        "staffCount": 14000,
+        "districtsReached": 76
+      },
+      "financials": {
+        "annualBudget": "₹600 Crore+",
+        "fcraRegistered": true,
+        "fcraNumber": "083782000",
+        "registration12A": true,
+        "registration80G": true,
+        "panNumber": "AAACA2000A",
+        "csr": true,
+        "accountabilityRating": "A+"
+      },
+      "impact": {
+        "totalBeneficiaries": "100 Million+",
+        "yearlyBeneficiaries": "2.1 Million+",
+        "keyAchievements": [
+          "2.1 million meals served daily to children in 24,000+ schools",
+          "Guinness World Record for largest Mid-Day Meal program",
+          "Reduced dropout rates by 40% in covered schools",
+          "60+ centralized kitchens across India"
+        ]
+      },
+      "certifications": ["ISO 22000:2005", "GiveIndia Verified", "FSSAI Certified"],
+      "awards": ["Padma Bhushan to Founder", "UN World Food Programme Recognition", "FICCI Award"],
+      "documents": {
+        "annualReport": "2024-25 Annual Report Available",
+        "auditedAccounts": true,
+        "fcraReturns": true
+      }
+    },
+    {
+      "id": "NGO007",
+      "name": "Greenpeace India",
+      "slug": "greenpeace-india",
+      "logo": "https://via.placeholder.com/80x80/16A34A/FFFFFF?text=GP",
+      "tagline": "Peace. Sustainability. Environmental Justice.",
+      "description": "Greenpeace India is an independent environmental campaign organization. It conducts research, lobbying, and direct action to protect the environment. Active in India since 2001, it campaigns on issues like climate change, forests, oceans, agriculture, and toxic chemicals.",
+      "registrationNumber": "SOR-2543/2001",
+      "registrationType": "Society",
+      "yearFounded": 2001,
+      "status": "Active",
+      "verified": true,
+      "rating": 4.2,
+      "reviewCount": 178,
+      "category": ["Environment"],
+      "subCategory": ["Climate Action", "Forest Conservation", "Ocean Protection", "Clean Energy"],
+      "sdgGoals": [7, 13, 14, 15],
+      "location": {
+        "address": "40, 8th Cross, 5th Main, Sadashivanagar",
+        "city": "Bengaluru",
+        "district": "Bengaluru Urban",
+        "state": "Karnataka",
+        "pincode": "560080",
+        "region": "South",
+        "coordinates": { "lat": 13.0067, "lng": 77.5798 }
+      },
+      "contact": {
+        "phone": "+91-80-4090-5555",
+        "email": "supporter.services@greenpeace.org",
+        "website": "https://www.greenpeace.org/india",
+        "socialMedia": {
+          "facebook": "GreenpeaceIndia",
+          "twitter": "@greenpeaceindia",
+          "instagram": "greenpeaceindia",
+          "linkedin": "greenpeace-india"
+        }
+      },
+      "leadership": {
+        "founderName": "International Greenpeace (India chapter 2001)",
+        "founderBio": "Greenpeace India was established as a national chapter of international Greenpeace.",
+        "ceoName": "Avinash Chanchal",
+        "boardMembers": ["Avinash Chanchal", "Pujarini Sen", "Sreedhar Ramamurthi"]
+      },
+      "operations": {
+        "beneficiaries": "Indian citizens, wildlife, forest communities",
+        "areasOfOperation": ["Climate Campaign", "Forests Campaign", "Food & Agriculture Campaign", "Oceans Campaign", "Clean Energy Campaign"],
+        "statesOfOperation": ["Karnataka", "Delhi", "Maharashtra", "West Bengal", "Tamil Nadu", "Andhra Pradesh", "Odisha", "Jharkhand", "Assam"],
+        "projectsCount": 15,
+        "volunteersCount": 50000,
+        "staffCount": 150,
+        "districtsReached": 50
+      },
+      "financials": {
+        "annualBudget": "₹30 Crore+",
+        "fcraRegistered": false,
+        "fcraNumber": "N/A",
+        "registration12A": true,
+        "registration80G": false,
+        "panNumber": "AAAAG2001G",
+        "csr": false,
+        "accountabilityRating": "B+"
+      },
+      "impact": {
+        "totalBeneficiaries": "5 Million+",
+        "yearlyBeneficiaries": "500,000+",
+        "keyAchievements": [
+          "Successfully campaigned to stop 20+ coal power plants",
+          "Western Ghats forest protection campaign",
+          "Led India's largest climate march with 2 million participants",
+          "Policy influence on India's solar energy targets"
+        ]
+      },
+      "certifications": ["Registered Society"],
+      "awards": ["Goldman Environmental Prize (associated researcher)", "Earth Day Award"],
+      "documents": {
+        "annualReport": "2024-25 Annual Report Available",
+        "auditedAccounts": true,
+        "fcraReturns": false
+      }
+    },
+    {
+      "id": "NGO008",
+      "name": "iCall - iPartner India",
+      "slug": "icall-ipartner-india",
+      "logo": "https://via.placeholder.com/80x80/8B5CF6/FFFFFF?text=IC",
+      "tagline": "Accessible Mental Health Support for All",
+      "description": "iCall is a psychosocial helpline and counseling center managed by the School of Human Ecology at Tata Institute of Social Sciences (TISS). Established in 2012, it provides mental health support, counseling, and referral services, especially for youth and marginalized communities.",
+      "registrationNumber": "TISS-SHE-2012",
+      "registrationType": "Section 8 Company",
+      "yearFounded": 2012,
+      "status": "Active",
+      "verified": true,
+      "rating": 4.7,
+      "reviewCount": 156,
+      "category": ["Mental Health"],
+      "subCategory": ["Counseling", "Mental Health Helpline", "Youth Mental Health", "LGBTQ+ Support"],
+      "sdgGoals": [3, 10],
+      "location": {
+        "address": "Tata Institute of Social Sciences, V.N. Purav Marg, Deonar",
+        "city": "Mumbai",
+        "district": "Mumbai",
+        "state": "Maharashtra",
+        "pincode": "400088",
+        "region": "West",
+        "coordinates": { "lat": 19.0452, "lng": 72.9138 }
+      },
+      "contact": {
+        "phone": "9152987821",
+        "email": "icall@tiss.edu",
+        "website": "https://icallhelpline.org",
+        "socialMedia": {
+          "facebook": "icallhelpline",
+          "twitter": "@icallhelpline",
+          "instagram": "icallhelpline",
+          "linkedin": "icall-tiss"
+        }
+      },
+      "leadership": {
+        "founderName": "Dr. Achal Bhagat & TISS",
+        "founderBio": "Established by TISS School of Human Ecology to address mental health crisis and provide accessible support.",
+        "ceoName": "Dr. Ritika Sinha",
+        "boardMembers": ["Prof. S. Parasuraman", "Dr. Achal Bhagat", "Dr. Ritika Sinha"]
+      },
+      "operations": {
+        "beneficiaries": "Youth, LGBTQ+ individuals, abuse survivors, general public",
+        "areasOfOperation": ["Phone Counseling", "Email Counseling", "Face-to-Face Counseling", "Training Programs", "Mental Health Awareness"],
+        "statesOfOperation": ["Maharashtra", "Delhi", "Karnataka", "Tamil Nadu", "Gujarat", "West Bengal", "Andhra Pradesh", "Telangana"],
+        "projectsCount": 12,
+        "volunteersCount": 200,
+        "staffCount": 80,
+        "districtsReached": 20
+      },
+      "financials": {
+        "annualBudget": "₹5 Crore+",
+        "fcraRegistered": false,
+        "fcraNumber": "N/A",
+        "registration12A": true,
+        "registration80G": true,
+        "panNumber": "AAATI2012I",
+        "csr": true,
+        "accountabilityRating": "A"
+      },
+      "impact": {
+        "totalBeneficiaries": "500,000+",
+        "yearlyBeneficiaries": "80,000+",
+        "keyAchievements": [
+          "80,000+ individuals supported annually",
+          "India's first dedicated LGBTQ+ mental health helpline",
+          "1000+ mental health professionals trained",
+          "Research publications on youth mental health in India"
+        ]
+      },
+      "certifications": ["TISS Affiliated", "Ministry of Health Recognized"],
+      "awards": ["National Mental Health Award"],
+      "documents": {
+        "annualReport": "2024-25 Annual Report Available",
+        "auditedAccounts": true,
+        "fcraReturns": false
+      }
+    },
+    {
+      "id": "NGO009",
+      "name": "Aga Khan Rural Support Programme India",
+      "slug": "aga-khan-rural-support-programme-india",
+      "logo": "https://via.placeholder.com/80x80/0891B2/FFFFFF?text=AKRS",
+      "tagline": "Sustainable Rural Development for Marginalised Communities",
+      "description": "AKRSP(I) is a development organization working in Gujarat, Madhya Pradesh, Bihar, and Jharkhand to improve livelihoods and quality of life of rural communities. Established in 1984, it works on natural resource management, institutional development, and livelihood promotion.",
+      "registrationNumber": "F-5430",
+      "registrationType": "Society",
+      "yearFounded": 1984,
+      "status": "Active",
+      "verified": true,
+      "rating": 4.6,
+      "reviewCount": 134,
+      "category": ["Rural Development", "Livelihood"],
+      "subCategory": ["Natural Resource Management", "Women Empowerment", "Water & Sanitation", "Agriculture"],
+      "sdgGoals": [1, 2, 5, 6, 8, 15],
+      "location": {
+        "address": "Choice Premises, Swastik Cross Roads, Navrangpura",
+        "city": "Ahmedabad",
+        "district": "Ahmedabad",
+        "state": "Gujarat",
+        "pincode": "380009",
+        "region": "West",
+        "coordinates": { "lat": 23.0274, "lng": 72.5714 }
+      },
+      "contact": {
+        "phone": "+91-79-2656-0328",
+        "email": "akrsp@akrspi.org",
+        "website": "https://www.akrspi.org",
+        "socialMedia": {
+          "facebook": "AKRSPI",
+          "twitter": "@AKRSP_India",
+          "instagram": "akrsp_india",
+          "linkedin": "aga-khan-rural-support-programme-india"
+        }
+      },
+      "leadership": {
+        "founderName": "His Highness Prince Karim Aga Khan",
+        "founderBio": "Founded under the Aga Khan Development Network umbrella to promote rural development in India.",
+        "ceoName": "Apoorva Oza",
+        "boardMembers": ["Apoorva Oza", "Firoz Rasul", "Rahul Asthana"]
+      },
+      "operations": {
+        "beneficiaries": "Tribal, rural, and marginalized communities",
+        "areasOfOperation": ["Natural Resource Management", "Livelihood Promotion", "Institution Building", "WASH", "Social Infrastructure"],
+        "statesOfOperation": ["Gujarat", "Madhya Pradesh", "Bihar", "Jharkhand"],
+        "projectsCount": 22,
+        "volunteersCount": 1500,
+        "staffCount": 500,
+        "districtsReached": 40
+      },
+      "financials": {
+        "annualBudget": "₹70 Crore+",
+        "fcraRegistered": true,
+        "fcraNumber": "083781984",
+        "registration12A": true,
+        "registration80G": true,
+        "panNumber": "AAATA1984A",
+        "csr": true,
+        "accountabilityRating": "A+"
+      },
+      "impact": {
+        "totalBeneficiaries": "3 Million+",
+        "yearlyBeneficiaries": "400,000+",
+        "keyAchievements": [
+          "5,000+ community institutions built",
+          "Watershed development over 500,000 hectares",
+          "400,000 families supported with livelihood",
+          "Women's SHGs with ₹200 crore+ corpus"
+        ]
+      },
+      "certifications": ["Aga Khan Development Network", "GiveIndia Verified"],
+      "awards": ["UNDP Equator Prize", "World Bank Development Marketplace Award"],
+      "documents": {
+        "annualReport": "2024-25 Annual Report Available",
+        "auditedAccounts": true,
+        "fcraReturns": true
+      }
+    },
+    {
+      "id": "NGO010",
+      "name": "Doctors For You",
+      "slug": "doctors-for-you",
+      "logo": "https://via.placeholder.com/80x80/DC2626/FFFFFF?text=DFY",
+      "tagline": "Healthcare for All – Wherever and Whenever Needed",
+      "description": "Doctors For You (DFY) is a disaster response and public health NGO working across India. Founded in 2007, DFY provides emergency medical relief during disasters and works on public health programs for underserved communities across 15+ states.",
+      "registrationNumber": "MH-2007/017984",
+      "registrationType": "Society",
+      "yearFounded": 2007,
+      "status": "Active",
+      "verified": true,
+      "rating": 4.8,
+      "reviewCount": 245,
+      "category": ["Health", "Disaster Relief"],
+      "subCategory": ["Emergency Medical Relief", "Public Health", "Maternal Health", "Disaster Response"],
+      "sdgGoals": [3, 1, 11],
+      "location": {
+        "address": "Sector 6, CBD Belapur",
+        "city": "Navi Mumbai",
+        "district": "Thane",
+        "state": "Maharashtra",
+        "pincode": "400614",
+        "region": "West",
+        "coordinates": { "lat": 19.0296, "lng": 73.0391 }
+      },
+      "contact": {
+        "phone": "+91-22-2757-0440",
+        "email": "info@dfyindia.org",
+        "website": "https://www.dfyindia.org",
+        "socialMedia": {
+          "facebook": "DoctorsForYouIndia",
+          "twitter": "@DFYIndia",
+          "instagram": "dfy_india",
+          "linkedin": "doctors-for-you"
+        }
+      },
+      "leadership": {
+        "founderName": "Dr. Ravikant Singh",
+        "founderBio": "Dr. Ravikant Singh founded DFY after witnessing inadequate medical response during the 2004 tsunami.",
+        "ceoName": "Dr. Ravikant Singh",
+        "boardMembers": ["Dr. Ravikant Singh", "Dr. Sanjay Nagral", "Dr. Nandita Shah"]
+      },
+      "operations": {
+        "beneficiaries": "Disaster victims, tribal, remote rural communities",
+        "areasOfOperation": ["Disaster Medical Relief", "Primary Healthcare", "Maternal & Child Health", "Nutrition Programs", "Training"],
+        "statesOfOperation": ["Maharashtra", "Uttar Pradesh", "Bihar", "Jharkhand", "Odisha", "Assam", "West Bengal", "Rajasthan", "Madhya Pradesh", "Chhattisgarh", "Gujarat", "Delhi", "Kerala", "Tamil Nadu", "Karnataka"],
+        "projectsCount": 20,
+        "volunteersCount": 3000,
+        "staffCount": 250,
+        "districtsReached": 80
+      },
+      "financials": {
+        "annualBudget": "₹25 Crore+",
+        "fcraRegistered": true,
+        "fcraNumber": "083782007",
+        "registration12A": true,
+        "registration80G": true,
+        "panNumber": "AAATD2007D",
+        "csr": true,
+        "accountabilityRating": "A"
+      },
+      "impact": {
+        "totalBeneficiaries": "5 Million+",
+        "yearlyBeneficiaries": "500,000+",
+        "keyAchievements": [
+          "Responded to 100+ disaster situations including COVID-19, floods, earthquakes",
+          "1 million+ free consultations annually",
+          "200+ mobile medical camps monthly",
+          "Trained 10,000+ community health workers"
+        ]
+      },
+      "certifications": ["WHO Recognized", "GiveIndia Verified", "NDMA Empaneled"],
+      "awards": ["National Award for Excellence in Healthcare", "Times of India Most Influential NGO"],
+      "documents": {
+        "annualReport": "2024-25 Annual Report Available",
+        "auditedAccounts": true,
+        "fcraReturns": true
+      }
+    },
+    {
+      "id": "NGO011",
+      "name": "Teach For India",
+      "slug": "teach-for-india",
+      "logo": "https://via.placeholder.com/80x80/F97316/FFFFFF?text=TFI",
+      "tagline": "One Day All Children Will Attain Excellent Education",
+      "description": "Teach For India is a nationwide movement of outstanding college graduates and professionals who commit two years to teach full-time in under-resourced schools. Founded in 2008 by Shaheen Mistri, TFI builds a pipeline of leaders driven to end educational inequity.",
+      "registrationNumber": "MH-2008/019453",
+      "registrationType": "Section 8 Company",
+      "yearFounded": 2008,
+      "status": "Active",
+      "verified": true,
+      "rating": 4.8,
+      "reviewCount": 387,
+      "category": ["Education"],
+      "subCategory": ["School Education", "Leadership Development", "Teacher Training", "Fellowship"],
+      "sdgGoals": [4, 10],
+      "location": {
+        "address": "2nd Floor, Kailas Industrial Complex, Park Site, Vikhroli West",
+        "city": "Mumbai",
+        "district": "Mumbai",
+        "state": "Maharashtra",
+        "pincode": "400079",
+        "region": "West",
+        "coordinates": { "lat": 19.1075, "lng": 72.9267 }
+      },
+      "contact": {
+        "phone": "+91-22-6117-1600",
+        "email": "info@teachforindia.org",
+        "website": "https://www.teachforindia.org",
+        "socialMedia": {
+          "facebook": "TeachForIndia",
+          "twitter": "@TeachForIndia",
+          "instagram": "teachforindia",
+          "linkedin": "teach-for-india"
+        }
+      },
+      "leadership": {
+        "founderName": "Shaheen Mistri",
+        "founderBio": "Shaheen Mistri founded TFI inspired by Teach For America to build a movement of leaders committed to educational equity in India.",
+        "ceoName": "Shaheen Mistri",
+        "boardMembers": ["Shaheen Mistri", "Anand Mahindra", "Nandan Nilekani"]
+      },
+      "operations": {
+        "beneficiaries": "Children in low-income government and municipal schools",
+        "areasOfOperation": ["2-year Teaching Fellowship", "Alumni Leadership Programs", "Teacher Development", "School Transformation"],
+        "statesOfOperation": ["Maharashtra", "Delhi", "Telangana", "Karnataka", "Tamil Nadu", "Gujarat", "Rajasthan", "Bihar", "Pune"],
+        "projectsCount": 10,
+        "volunteersCount": 1000,
+        "staffCount": 4000,
+        "districtsReached": 40
+      },
+      "financials": {
+        "annualBudget": "₹120 Crore+",
+        "fcraRegistered": true,
+        "fcraNumber": "083782008",
+        "registration12A": true,
+        "registration80G": true,
+        "panNumber": "AAATT2008T",
+        "csr": true,
+        "accountabilityRating": "A+"
+      },
+      "impact": {
+        "totalBeneficiaries": "1.5 Million+",
+        "yearlyBeneficiaries": "100,000+",
+        "keyAchievements": [
+          "5,000+ Fellows placed in schools",
+          "6,400+ Alumni now in leadership positions",
+          "36,000+ students impacted annually",
+          "Present in 9 cities across India"
+        ]
+      },
+      "certifications": ["Teach For All Network", "GiveIndia Verified", "Credibility Alliance"],
+      "awards": ["Skoll Foundation Award", "Echoing Green Fellow", "Ashoka Changemakers Award"],
+      "documents": {
+        "annualReport": "2024-25 Annual Report Available",
+        "auditedAccounts": true,
+        "fcraReturns": true
+      }
+    },
+    {
+      "id": "NGO012",
+      "name": "Wildlife Trust of India",
+      "slug": "wildlife-trust-of-india",
+      "logo": "https://via.placeholder.com/80x80/15803D/FFFFFF?text=WTI",
+      "tagline": "Securing the Future for Wildlife and Ecosystems",
+      "description": "Wildlife Trust of India (WTI) is one of India's leading nature conservation organizations. Founded in 1998, WTI works to conserve wildlife and its habitats through field projects, rescue operations, habitat management, and community engagement across India.",
+      "registrationNumber": "S/60843/NICC",
+      "registrationType": "Trust",
+      "yearFounded": 1998,
+      "status": "Active",
+      "verified": true,
+      "rating": 4.7,
+      "reviewCount": 198,
+      "category": ["Environment", "Wildlife Conservation"],
+      "subCategory": ["Wildlife Rescue", "Habitat Conservation", "Elephant Conservation", "Anti-Poaching"],
+      "sdgGoals": [15, 14, 13],
+      "location": {
+        "address": "10-B, Lakshmipat Colony, Majnu Ka Tila",
+        "city": "New Delhi",
+        "district": "North Delhi",
+        "state": "Delhi",
+        "pincode": "110054",
+        "region": "North",
+        "coordinates": { "lat": 28.7151, "lng": 77.2273 }
+      },
+      "contact": {
+        "phone": "+91-120-4726-000",
+        "email": "wti@wti.org.in",
+        "website": "https://www.wti.org.in",
+        "socialMedia": {
+          "facebook": "WildlifeTrustIndia",
+          "twitter": "@WTI_India",
+          "instagram": "wildlife_trust_india",
+          "linkedin": "wildlife-trust-of-india"
+        }
+      },
+      "leadership": {
+        "founderName": "Vivek Menon",
+        "founderBio": "Dr. Vivek Menon, wildlife expert and conservationist, co-founded WTI to bridge the gap between conservation science and action.",
+        "ceoName": "Dr. Vivek Menon",
+        "boardMembers": ["Dr. Vivek Menon", "M.K. Ranjitsinh", "M.F. Farooqui"]
+      },
+      "operations": {
+        "beneficiaries": "Wildlife, forest communities, India's biodiversity",
+        "areasOfOperation": ["Wildlife Rescue & Rehabilitation", "Elephant Conservation", "Anti-Poaching", "Habitat Management", "Community Conservation"],
+        "statesOfOperation": ["Delhi", "Assam", "Uttarakhand", "Rajasthan", "Karnataka", "Kerala", "Tamil Nadu", "West Bengal", "Maharashtra", "Odisha", "Jharkhand", "Himachal Pradesh", "Arunachal Pradesh"],
+        "projectsCount": 30,
+        "volunteersCount": 500,
+        "staffCount": 300,
+        "districtsReached": 60
+      },
+      "financials": {
+        "annualBudget": "₹40 Crore+",
+        "fcraRegistered": true,
+        "fcraNumber": "083781998",
+        "registration12A": true,
+        "registration80G": true,
+        "panNumber": "AAATW1998W",
+        "csr": true,
+        "accountabilityRating": "A"
+      },
+      "impact": {
+        "totalBeneficiaries": "Species & Ecosystems",
+        "yearlyBeneficiaries": "Thousands of animals",
+        "keyAchievements": [
+          "Rescued and rehabilitated 3,000+ elephants",
+          "Established 30+ wildlife corridors",
+          "Helped protect 22+ national parks and wildlife sanctuaries",
+          "Trained 5,000+ wildlife professionals"
+        ]
+      },
+      "certifications": ["Ministry of Environment Recognized", "IUCN Partner"],
+      "awards": ["National Wildlife Conservation Award", "UNDP Equator Prize"],
+      "documents": {
+        "annualReport": "2024-25 Annual Report Available",
+        "auditedAccounts": true,
+        "fcraReturns": true
+      }
+    }
+  ],
+  "categories": [
+    "Education",
+    "Health",
+    "Environment",
+    "Rural Development",
+    "Women Empowerment",
+    "Child Welfare",
+    "Disability",
+    "Elderly Care",
+    "Disaster Relief",
+    "Mental Health",
+    "Livelihood",
+    "Nutrition",
+    "Water & Sanitation",
+    "Arts & Culture",
+    "Human Rights",
+    "Animal Welfare",
+    "Wildlife Conservation",
+    "Sports",
+    "Digital Literacy",
+    "Tribal Development"
+  ],
+  "states": [
+    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+    "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand",
+    "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur",
+    "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab",
+    "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura",
+    "Uttar Pradesh", "Uttarakhand", "West Bengal", "Delhi", "Jammu & Kashmir",
+    "Ladakh", "Puducherry", "Chandigarh", "Andaman & Nicobar Islands"
+  ],
+  "registrationTypes": ["Trust", "Society", "Section 8 Company"],
+  "sdgGoals": [
+    { "id": 1, "title": "No Poverty", "color": "#E5243B" },
+    { "id": 2, "title": "Zero Hunger", "color": "#DDA63A" },
+    { "id": 3, "title": "Good Health & Well-being", "color": "#4C9F38" },
+    { "id": 4, "title": "Quality Education", "color": "#C5192D" },
+    { "id": 5, "title": "Gender Equality", "color": "#FF3A21" },
+    { "id": 6, "title": "Clean Water & Sanitation", "color": "#26BDE2" },
+    { "id": 7, "title": "Affordable & Clean Energy", "color": "#FCC30B" },
+    { "id": 8, "title": "Decent Work & Economic Growth", "color": "#A21942" },
+    { "id": 9, "title": "Industry, Innovation & Infrastructure", "color": "#FD6925" },
+    { "id": 10, "title": "Reduced Inequalities", "color": "#DD1367" },
+    { "id": 11, "title": "Sustainable Cities & Communities", "color": "#FD9D24" },
+    { "id": 12, "title": "Responsible Consumption", "color": "#BF8B2E" },
+    { "id": 13, "title": "Climate Action", "color": "#3F7E44" },
+    { "id": 14, "title": "Life Below Water", "color": "#0A97D9" },
+    { "id": 15, "title": "Life on Land", "color": "#56C02B" },
+    { "id": 16, "title": "Peace, Justice & Strong Institutions", "color": "#00689D" },
+    { "id": 17, "title": "Partnerships for the Goals", "color": "#19486A" }
+  ]
+}
