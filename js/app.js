@@ -143,9 +143,14 @@ function renderNGOCard(ngo) {
           <span class="stars">${renderStars(ngo.rating)}</span>
           <span>${ngo.rating} (${ngo.reviewCount})</span>
         </div>
-        <a href="ngo-profile.html?id=${ngo.id}" class="btn btn-outline btn-sm" onclick="event.stopPropagation()">
-          View Details →
-        </a>
+        <div style="display:flex;gap:6px;align-items:center">
+          <button class="btn btn-outline btn-sm" onclick="event.stopPropagation();verifyOnDarpan('${ngo.name.replace(/'/g, "\\'")}')" title="Verify on NGO Darpan" style="font-size:0.72rem;padding:5px 8px">
+            🔍 Darpan
+          </button>
+          <a href="ngo-profile.html?id=${ngo.id}" class="btn btn-outline btn-sm" onclick="event.stopPropagation()">
+            View →
+          </a>
+        </div>
       </div>
     </article>
   `;
@@ -585,6 +590,23 @@ function renderProfile(ngoId) {
         <div>FCRA Returns: ${ngo.documents.fcraReturns ? 'Filed' : 'N/A'}</div>
       </div>
     </div>
+
+    <!-- NGO Darpan Verification -->
+    <div class="sidebar-widget">
+      <div class="sidebar-widget-title">🔍 Verify on NGO Darpan</div>
+      <p style="font-size:0.8rem;color:var(--text-medium);line-height:1.5;margin-bottom:12px">
+        Verify this NGO's credentials on the Government of India's official portal maintained by NITI Aayog.
+      </p>
+      <button onclick="verifyOnDarpan('${ngo.name.replace(/'/g, "\\'")}')" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;margin-bottom:8px">
+        🔍 Search "${ngo.name.split(' ').slice(0,3).join(' ')}" on Darpan
+      </button>
+      <a href="https://ngodarpan.gov.in" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="width:100%;justify-content:center;font-size:0.78rem">
+        Open NGO Darpan Portal ↗
+      </a>
+      <p style="font-size:0.72rem;color:var(--text-light);margin-top:8px">
+        NGO Darpan (ngodarpan.gov.in) is the official Government of India database of NGOs registered with central ministries.
+      </p>
+    </div>
   `;
 }
 
@@ -596,6 +618,31 @@ function getSDGColor(num) {
     16:'#00689D',17:'#19486A'
   };
   return colors[num] || '#6b7280';
+}
+
+// ── NGO Darpan Integration ────────────────────────────────────────────────────
+const DARPAN_BASE_URL = 'https://ngodarpan.gov.in';
+
+function searchOnDarpan() {
+  const input = document.getElementById('darpan-search-input');
+  const query = (input && input.value.trim()) || (state.filters.search && state.filters.search.trim()) || '';
+  const url = query
+    ? `${DARPAN_BASE_URL}/index.php/home/advance_search?name=${encodeURIComponent(query)}`
+    : `${DARPAN_BASE_URL}/index.php/home/advance_search`;
+  window.open(url, '_blank', 'noopener,noreferrer');
+}
+
+function openDarpanStatewise() {
+  const stateFilter = state.filters.state;
+  const url = stateFilter
+    ? `${DARPAN_BASE_URL}/index.php/home/statewise_view`
+    : `${DARPAN_BASE_URL}/index.php/home/statewise_view`;
+  window.open(url, '_blank', 'noopener,noreferrer');
+}
+
+function verifyOnDarpan(ngoName) {
+  const url = `${DARPAN_BASE_URL}/index.php/home/advance_search?name=${encodeURIComponent(ngoName)}`;
+  window.open(url, '_blank', 'noopener,noreferrer');
 }
 
 // ── Utility ──────────────────────────────────────────────────────────────────
@@ -689,6 +736,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     applyFilters();
     renderNGOGrid(document.getElementById('ngo-grid'));
     bindFilters();
+
+    // NGO Darpan: sync search input with main search & support Enter key
+    const darpanInput = document.getElementById('darpan-search-input');
+    if (darpanInput) {
+      const mainSearch = document.getElementById('search-input');
+      if (mainSearch) {
+        mainSearch.addEventListener('input', () => {
+          if (!darpanInput.value) darpanInput.placeholder = mainSearch.value ? `Verify "${mainSearch.value}" on Darpan` : 'NGO name to verify…';
+        });
+      }
+      darpanInput.addEventListener('keydown', e => {
+        if (e.key === 'Enter') searchOnDarpan();
+      });
+    }
   }
 
   if (page === 'profile') {
