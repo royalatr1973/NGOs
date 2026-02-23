@@ -235,9 +235,30 @@
             </label>
           </div>
 
+          <!-- NGO Darpan Integration -->
+          <div class="filter-section" id="darpan-section">
+            <div class="filter-section-title">NGO Darpan Verification</div>
+            <p style="font-size:0.78rem;color:var(--text-light);line-height:1.5;margin-bottom:10px">
+              Cross-verify NGOs on the Government of India's official NGO Darpan portal.
+            </p>
+            <div class="search-input-wrap" style="margin-bottom:8px">
+              <span class="search-icon">🔎</span>
+              <input type="text" id="darpan-search-input" class="form-control" placeholder="NGO name to verify…" aria-label="Search NGO on NGO Darpan" style="font-size:0.82rem">
+            </div>
+            <button onclick="searchOnDarpan()" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;margin-bottom:6px">
+              Search on NGO Darpan
+            </button>
+            <button onclick="openDarpanStatewise()" class="btn btn-outline btn-sm" style="width:100%;justify-content:center;font-size:0.78rem">
+              Browse by State on Darpan
+            </button>
+            <p style="font-size:0.72rem;color:var(--text-light);margin-top:8px;line-height:1.4">
+              NGO Darpan is maintained by the Government of India's NITI Aayog.
+            </p>
+          </div>
+
           <div class="notice notice-info">
             <span>ℹ️</span>
-            <span style="font-size:0.8rem">Data sourced from MCA21, FCRA Portal, Income Tax Dept., and NGO Darpan.</span>
+            <span style="font-size:0.8rem">Data sourced from MCA21, FCRA Portal, Income Tax Dept., and <a href="https://ngodarpan.gov.in" target="_blank" rel="noopener" style="color:var(--primary)">NGO Darpan</a>.</span>
           </div>
         </div>
       </aside>
